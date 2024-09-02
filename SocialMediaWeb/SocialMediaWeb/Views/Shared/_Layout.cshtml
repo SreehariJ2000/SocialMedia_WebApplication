@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="~/Content/Site.css" />
+</head>
+<body class="body-section">
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo and Application Name -->
+            <a href="@Url.Action("Index", "Home")" class="navbar-brand">
+              
+                <img src="~/Content/Images/images-modified.png" alt="Logo" class="logo" />
+                <h1>Connectify</h1>
+            </a>
+
+            <!-- Navbar Links -->
+            <div class="navbar-links">
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+
+            <!-- Sign-In/Sign-Up Links -->
+            <div class="auth-links">
+                <ul>
+                    <li>@Html.ActionLink("Sign In", "Login", "Account")</li>
+                    <li>@Html.ActionLink("Sign Up", "Register", "Account")</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body-content">
+        @RenderBody()
+    </div>
+
+   
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; @DateTime.Now.Year - Connectify</p>
+               
+            </div>
+            <div class="footer-center">
+                <p><a href="mailto:info@example.com">connectify@gmail.com</a></p>
+                <p>+1 (123) 456-7890</p>
+            </div>
+            <div class="footer-right">
+                <div>Address :</div>
+                <div>1234 Tech Park Avenue</div>
+                <div>Gachibowli, Hyderabad </div>
+                <div> Telangana, India</div>   
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/bundles/jquery"></script>
+    <script src="~/bundles/bootstrap"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

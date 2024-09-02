@@ -1,0 +1,45 @@
+﻿/* About section styling */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+/* Intro section styles */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.intro-text {
+    font-size: 36px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #333;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Third section styles */
+.third-section {
+    display: flex;
+    justify-content: space-around; 
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cards {
+    
+    border-radius: 10px; 
+    padding: 20px;
+    width: 200px; 
+    text-align: center; 
+    border : solid;
+}
