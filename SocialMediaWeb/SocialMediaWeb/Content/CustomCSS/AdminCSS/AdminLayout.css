@@ -7,18 +7,25 @@
     top: 0;
     left: 0;
     width: 100%; 
-   
     display: flex;
-    align-items: center;
-    justify-content: space-between; 
 }
 
-   
-  .Title-bar .logo {
-        height: 40px; 
-        width: auto;
+    .Title-bar .title {
+        display: flex;
+        align-items: center; 
     }
 
+    .Title-bar .logo {
+        height: 40px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    .Title-bar .site-name {
+        font-size: 30px; 
+        color: #ffffff; 
+        font-weight: bold; 
+    }
 
 /* Sidebar  */
 .sidebar-list {

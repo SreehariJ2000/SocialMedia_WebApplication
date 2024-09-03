@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SocialMediaWeb.Models.SignupViewModel
+
+@{
+    ViewBag.Title = "Signup";
+}
+
+<h2>Signup</h2>
+
+@using (Html.BeginForm("Signup", "Authentication", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FirstName)
+        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FirstName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LastName)
+        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.LastName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DateOfBirth)
+        @Html.TextBoxFor(model => model.DateOfBirth, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(model => model.DateOfBirth)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Gender)
+        <div>
+            @Html.RadioButtonFor(model => model.Gender, "M") Male
+            @Html.RadioButtonFor(model => model.Gender, "F") Female
+            @Html.RadioButtonFor(model => model.Gender, "O") Other
+        </div>
+        @Html.ValidationMessageFor(model => model.Gender)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ProfilePicture)
+        @Html.TextBoxFor(model => model.ProfilePicture, new { type = "file", @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ProfilePicture)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PhoneNumber)
+        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.PhoneNumber)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Address)
+        @Html.TextAreaFor(model => model.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Address)
+    </div>
+
+    <div class="form-group">
+        @Html.Label("State")
+        @Html.DropDownList("StateID", (IEnumerable<SelectListItem>)ViewBag.States, "Select State", new { @class = "form-control", id = "StateDropdown" })
+    </div>
+
+    <div class="form-group">
+        @Html.Label("District")
+        @Html.DropDownList("DistrictID", new List<SelectListItem>(), "Select District", new { @class = "form-control", id = "DistrictDropdown" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserPassword)
+        @Html.PasswordFor(model => model.UserPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.UserPassword)
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Signup" class="btn btn-primary" />
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#StateDropdown').change(function () {
+                var stateId = $(this).val();
+                if (stateId) {
+                    $.ajax({
+                        url: '@Url.Action("GetCities", "Authentication")',
+                        data: { stateId: stateId },
+                        success: function (data) {
+                            var districtDropdown = $('#DistrictDropdown');
+                            districtDropdown.empty();
+                            districtDropdown.append('<option value="">Select District</option>');
+                            $.each(data, function (index, item) {
+                                districtDropdown.append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                            });
+                        }
+                    });
+                } else {
+                    $('#DistrictDropdown').empty().append('<option value="">Select District</option>');
+                }
+            });
+        });
+    </script>
+}
+
