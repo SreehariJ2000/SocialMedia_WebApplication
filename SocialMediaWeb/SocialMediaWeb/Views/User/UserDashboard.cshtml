@@ -1,59 +1,39 @@
-﻿
+﻿@model List<SocialMediaWeb.Models.PostDisplayViewModel>
 @{
     ViewBag.Title = "UserDashboard";
     Layout = "~/Views/Shared/UserLayout.cshtml";
 }
 
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
-<h2>UserDashboard</h2>
 
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Post ID</th>
+            <th>User ID</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Content</th>
+            <th>Image</th>
+            <th>Created At</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td>@post.PostId</td>
+                <td>@post.UserId</td>
+                <td>@post.Email</td>
+                <td>@post.FirstName @post.LastName</td>
+                <td>@post.Content</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(post.ImageUrl))
+                    {
+                        <img src="data:image/jpeg;base64,@post.ImageUrl" alt="Post Image" style="max-width: 100px;" />
+                    }
+                </td>
+                <td>@post.CreatedAt</td>
+            </tr>
+        }
+    </tbody>
+</table>

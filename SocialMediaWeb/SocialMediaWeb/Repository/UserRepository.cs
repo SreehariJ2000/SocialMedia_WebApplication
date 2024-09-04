@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using SocialMediaWeb.Models;
 using System.Web.Mvc;
+using System.Collections.Generic;
 
 namespace SocialMediaWeb.Repository
 {
@@ -130,5 +131,90 @@ namespace SocialMediaWeb.Repository
                 command.ExecuteNonQuery();
             }
         }
+
+
+        public void UpdatePassword(string email, string newPassword)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPU_Password", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Email", email);
+                    command.Parameters.AddWithValue("@NewPassword", newPassword);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public void AddPost(Post post)
+        {
+                using (var con = new SqlConnection(connectionString))
+                {
+                    using (var cmd = new SqlCommand("SPI_Post", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                         cmd.Parameters.AddWithValue("@userId", post.UserId);
+                         cmd.Parameters.AddWithValue("@content", post.Content);
+                         cmd.Parameters.AddWithValue("@imageUrl", post.ImageUrl);
+                         cmd.Parameters.AddWithValue("@createdAt", post.CreatedAt);
+
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }   
+        }
+
+
+        public List<PostDisplayViewModel> GetAllPost()
+        {
+            List<PostDisplayViewModel> posts = new List<PostDisplayViewModel>();
+
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    using (var command = new SqlCommand("SPS_Post", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        connection.Open();
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var post = new PostDisplayViewModel
+                                {
+                                    PostId = Convert.ToInt32(reader["postId"]),
+                                    UserId = Convert.ToInt32(reader["userId"]),
+                                    Email = reader["email"].ToString(),
+                                    FirstName = reader["firstName"].ToString(),
+                                    LastName = reader["lastName"].ToString(),
+                                    Content = reader["content"].ToString(),
+                                    ImageUrl = reader["imageUrl"] != DBNull.Value ? reader["imageUrl"].ToString() : null,
+                                    CreatedAt = Convert.ToDateTime(reader["createdAt"])
+                                };
+
+                                posts.Add(post);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+
+            return posts;
+        }
+
+
+
     }
 }

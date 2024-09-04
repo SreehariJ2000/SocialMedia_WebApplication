@@ -16,7 +16,18 @@ namespace SocialMediaWeb.Controllers
 
         public ActionResult UserDashboard()
         {
-            return View();
+            try
+            {
+                var posts = userRepository.GetAllPost();
+                return View(posts);
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                Console.WriteLine(ex.Message);
+                return View(new List<PostDisplayViewModel>());
+            }
+            
         }
 
 
@@ -123,6 +134,114 @@ namespace SocialMediaWeb.Controllers
             }
             return View(model);
         }
+
+
+        /// <summary>
+        /// Load the change password html.
+        /// </summary>
+        /// <returns></returns>
+
+        [HttpGet]
+        public ActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Submit the data to data base for change password
+        /// </summary>
+        /// <param name="model">   contails old and new password </param>
+        /// <returns></returns>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangePassword(ChangePasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    string userEmail = Session["UserEmail"].ToString();
+                    var user = authenticationRepository.AuthenticateUser(userEmail, model.OldPassword);
+                    if (user != null)
+                    {
+                        string hashedNewPassword = BCrypt.Net.BCrypt.HashPassword(model.NewPassword);
+                        userRepository.UpdatePassword(userEmail, hashedNewPassword);
+
+                        return RedirectToAction("Login", "Authentication"); 
+                    }
+                    else
+                    {
+ 
+                        TempData["ErrorMessage"] = "Old password is incorrect";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle exceptions
+                    Console.WriteLine(ex.Message);
+                    ModelState.AddModelError("", "An error occurred while changing the password.");
+                }
+            }
+
+            return View(model);
+        }
+
+
+
+
+        public ActionResult AddPost()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddPost(PostViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    string imageBase64 = null;
+
+                    if (model.ImageFile != null && model.ImageFile.ContentLength > 0)
+                    {
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            model.ImageFile.InputStream.CopyTo(memoryStream);
+                            byte[] imageBytes = memoryStream.ToArray();
+                            imageBase64 = Convert.ToBase64String(imageBytes);
+                        }
+                    }
+
+                    var userId = (int)Session["UserId"]; 
+                    var createdAt = DateTime.Now;
+
+                    var post = new Post
+                    {
+                        UserId = userId,
+                        Content = model.Content,
+                        ImageUrl = imageBase64,
+                        CreatedAt = createdAt
+                    };
+
+                    userRepository.AddPost(post);
+                    return RedirectToAction("UserDashboard"); // Redirect to a suitable page
+                }
+                catch (Exception ex)
+                {
+                    // Handle exception
+                    Console.WriteLine(ex.Message);
+                    ModelState.AddModelError("", "An error occurred while adding the post.");
+                }
+            }
+
+            return View("AddPost", model);
+        }
+
+
+
+
 
 
     }

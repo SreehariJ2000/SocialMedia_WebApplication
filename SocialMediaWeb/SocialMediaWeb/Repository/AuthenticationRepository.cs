@@ -132,7 +132,7 @@ namespace SocialMediaWeb.Repository
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@UserPassword", password);
+                   
 
                     con.Open();
 
@@ -140,12 +140,16 @@ namespace SocialMediaWeb.Repository
                     {
                         if (reader.Read())
                         {
-                            user = new User
+                            string hashedPassword = reader["userPassword"].ToString();
+                            if (BCrypt.Net.BCrypt.Verify(password, hashedPassword))
                             {
-                                UserID = Convert.ToInt32(reader["userID"]),
-                                Email = reader["email"].ToString(),
-                                Role = reader["role"].ToString()
-                            };
+                                user = new User
+                                {
+                                    UserID = Convert.ToInt32(reader["userID"]),
+                                    Email = reader["email"].ToString(),
+                                    Role = reader["role"].ToString()
+                                };
+                            }
                         }
                     }
                 }

@@ -77,3 +77,13 @@ D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\obj\Debug\SocialMedi
 D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\obj\Debug\SocialMe.23CA0500.Up2Date
 D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\obj\Debug\SocialMediaWeb.dll
 D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\obj\Debug\SocialMediaWeb.pdb
+D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\bin\BCrypt.Net-Next.dll
+D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\bin\System.Buffers.dll
+D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\bin\System.Memory.dll
+D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\bin\System.Numerics.Vectors.dll
+D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\bin\BCrypt.Net-Next.xml
+D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\bin\System.Buffers.xml
+D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\bin\System.Memory.xml
+D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\bin\System.Numerics.Vectors.xml
+D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\bin\System.Runtime.CompilerServices.Unsafe.xml

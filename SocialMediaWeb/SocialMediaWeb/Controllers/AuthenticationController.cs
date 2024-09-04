@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web.Mvc;
 using SocialMediaWeb.Models;
 using SocialMediaWeb.Repository;
+using BCrypt.Net;
 
 namespace SocialMediaWeb.Controllers
 {
@@ -57,10 +58,12 @@ namespace SocialMediaWeb.Controllers
                         profilePicturePath = "/Content/Images/ProfilePicture/" + fileName;
                     }
 
+                    string hashedPassword = BCrypt.Net.BCrypt.HashPassword(model.UserPassword);
+
                     Users user = new Users
                     {
                         Email = model.Email,
-                        UserPassword = model.UserPassword
+                        UserPassword = hashedPassword
                     };
 
                     Profile profile = new Profile
@@ -77,7 +80,7 @@ namespace SocialMediaWeb.Controllers
                     };
 
                     authenticationRepository.AddUser(user, profile);
-                    return RedirectToAction("Login", "Autentication");
+                    return RedirectToAction("Login", "Authentication");
                 }
                 catch (Exception ex)
                 {
