@@ -20,7 +20,7 @@ namespace SocialMediaWeb.Models
         public DateTime DateOfBirth { get; set; }
 
         [Required]
-        public string Gender { get; set; } // Use "M", "F", or "O" for Male, Female, and Other
+        public string Gender { get; set; } 
 
         public string ProfilePicture { get; set; }
 

@@ -13,6 +13,11 @@ namespace SocialMediaWeb.Repository
     {
         private readonly string connectionString = ConfigurationManager.ConnectionStrings["SocialMediaDBConnectionString"].ConnectionString;
 
+
+        /// <summary>
+        /// Get the state details from database
+        /// </summary>
+        /// <returns>  list of states in dropdown </returns>
         public List<SelectListItem> GetStates()
         {
             var states = new List<SelectListItem>();
@@ -35,6 +40,12 @@ namespace SocialMediaWeb.Repository
             return states;
         }
 
+
+        /// <summary>
+        /// get the district based on the state
+        /// </summary>
+        /// <param name="stateId">  only select the districts of particular state</param>
+        /// <returns>  list of district in dropdown </returns>
         public List<SelectListItem> GetDistricts(int stateId)
         {
             var districts = new List<SelectListItem>();
@@ -58,12 +69,16 @@ namespace SocialMediaWeb.Repository
             return districts;
         }
 
+
+        /// <summary>
+        /// Add the signup details in database
+        /// </summary>
+        /// <param name="user"> user details (email , password )</param>
+        /// <param name="profile"> remaning details </param>
         public void AddUser(Users user, Profile profile)
         {
             try
             {
-                
-
                 using (var connection = new SqlConnection(connectionString))
                 {
                     using (var command = new SqlCommand("SPI_User", connection) { CommandType = CommandType.StoredProcedure })
@@ -97,6 +112,46 @@ namespace SocialMediaWeb.Repository
               
             }
             
+        }
+
+
+
+        /// <summary>
+        /// for login the verified user
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public User AuthenticateUser(string email, string password)
+        {
+            User user = null;
+
+            using (var con = new SqlConnection(connectionString))
+            {
+                using (var cmd = new SqlCommand("SPS_Login", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@UserPassword", password);
+
+                    con.Open();
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            user = new User
+                            {
+                                UserID = Convert.ToInt32(reader["userID"]),
+                                Email = reader["email"].ToString(),
+                                Role = reader["role"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+
+            return user;
         }
     }
 }

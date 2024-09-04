@@ -12,7 +12,11 @@ namespace SocialMediaWeb.Controllers
     {
          AuthenticationRepository authenticationRepository = new AuthenticationRepository();
 
-        // GET: Authentication/Signup
+        
+        /// <summary>
+        /// For rendering the sign up page . 
+        /// </summary>
+        /// <returns>  it will return sigh up html page </returns>
         public ActionResult Signup()
         {
             try
@@ -28,6 +32,13 @@ namespace SocialMediaWeb.Controllers
             }
         }
 
+
+        /// <summary>
+        /// when the user submit the sign up form . 
+        /// </summary>
+        /// <param name="model">  contails the data submitted from form </param>
+        /// <returns></returns>
+        /// 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Signup(SignupViewModel model)
@@ -66,11 +77,11 @@ namespace SocialMediaWeb.Controllers
                     };
 
                     authenticationRepository.AddUser(user, profile);
-                    return Content("data added");
+                    return RedirectToAction("Login", "Autentication");
                 }
                 catch (Exception ex)
                 {
-                    // Log the exception or handle it according to your needs
+                   
                     Console.WriteLine(ex.Message);
                     return Content("error4");
                 }
@@ -90,6 +101,13 @@ namespace SocialMediaWeb.Controllers
             return View(model);
         }
 
+
+        /// <summary>
+        ///  For detting the district base on state id . It will pass to the signup form as dropdowm. 
+        /// </summary>
+        /// <param name="stateId">  get from the signup form .
+        /// used to fetch corresponding district based on state </param>
+        /// <returns>  return a json list consist of districts </returns>
         public JsonResult GetCities(int stateId)
         {
             try
@@ -110,5 +128,77 @@ namespace SocialMediaWeb.Controllers
                 return Json(new List<SelectListItem>(), JsonRequestBehavior.AllowGet); 
             }
         }
+
+
+
+        /// <summary>
+        /// Load the login page
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+
+        /// <summary>
+        /// Post data to login page.
+        /// </summary>
+        /// <param name="model">  consist of data submitted by user from login form</param>
+        /// <returns></returns>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var user = authenticationRepository.AuthenticateUser(model.Email, model.Password);
+
+                    if (user != null)
+                    {
+                        
+                        Session["UserID"] = user.UserID;
+                        Session["UserEmail"] = user.Email;
+                        Session["UserRole"] = user.Role;
+
+                        if (user.Role == "Admin")
+                        {
+                            return RedirectToAction("AdminDashboard", "Admin");
+                        }
+                        else if (user.Role == "User")
+                        {
+                            return RedirectToAction("UserDashboard", "User");
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Invalid email or password.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    
+                    Console.WriteLine(ex.Message);
+                    return Content("Some thing is not correct");
+                }
+            }
+            return View(model);
+        }
+
+
+        /// <summary>
+        /// For logout
+        /// </summary>
+        /// <returns>  redirect to  the login page </returns>
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            Session.Abandon();
+            return RedirectToAction("Login");
+        }
+
+
     }
 }
