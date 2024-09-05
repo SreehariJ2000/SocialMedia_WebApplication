@@ -1,0 +1,33 @@
+﻿
+
+@model SocialMediaWeb.Models.ReportPostViewModel
+@{
+    ViewBag.Title = "Report Post";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<div class="">
+    <h2>Report Post</h2>
+
+    <div class="post-content">
+        <p>@Model.Content</p>
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <img src="data:image;base64,@Model.ImageUrl" alt="Post Image" class="post-picture" />
+        }
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.PostId)
+        @Html.HiddenFor(m => m.ReportedBy)
+        <div class="form-group">
+            <label for="reason">Reason for Reporting</label>
+            @Html.TextAreaFor(m => m.Reason, new { @class = "", rows = 5, placeholder = "reason for reporting this post" })
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="">Submit Report</button>
+        </div>
+    }
+</div>

@@ -132,10 +132,7 @@ namespace SocialMediaWeb.Repository
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Email", email);
-                   
-
                     con.Open();
-
                     using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())

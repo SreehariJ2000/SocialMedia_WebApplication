@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "ManagePost";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+<link href="~/Content/CustomCSS/UserCSS/ManagePost.css" rel="stylesheet" />
+
+
+@model IEnumerable<SocialMediaWeb.Models.Post>
+
+<h2>Manage Your Posts</h2>
+
+<div class="profile-container">
+
+</div>
+
+<div>
+    
+</div>
+
+<div class="posts-container">
+    @foreach (var post in Model)
+    {
+        <div class="post-item">
+            <div class="post-content">
+                <p>@post.Content</p>
+            </div>
+            <div class="post-image">
+                @if (!string.IsNullOrEmpty(post.ImageUrl))
+                {
+                    <img src="data:image/png;base64,@post.ImageUrl" alt="Post Image" />
+                }
+            </div>
+          
+            <div class="post-actions">
+                @Html.ActionLink("Delete", "DeletePost", new { id = post.PostId }, new { @class = "button" })
+            </div>
+        </div>
+    }
+</div>

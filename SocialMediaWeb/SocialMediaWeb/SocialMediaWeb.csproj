@@ -173,6 +173,8 @@
     <Content Include="Content\CustomCSS\HomeCSS\Aboutus.css" />
     <Content Include="Content\CustomCSS\HomeCSS\Contactus.css" />
     <Content Include="Content\CustomCSS\HomeCSS\Home.css" />
+    <Content Include="Content\CustomCSS\UserCSS\ManagePost.css" />
+    <Content Include="Content\CustomCSS\UserCSS\UserDashboard.css" />
     <Content Include="Content\CustomCSS\UserCSS\UserLayout.css" />
     <Content Include="Content\Images\carousel-image1.jpg" />
     <Content Include="Content\Images\carousel-image2.jpeg" />
@@ -224,6 +226,8 @@
     <Content Include="Views\User\EditProfile.cshtml" />
     <Content Include="Views\User\ChangePassword.cshtml" />
     <Content Include="Views\User\AddPost.cshtml" />
+    <Content Include="Views\User\ManagePost.cshtml" />
+    <Content Include="Views\User\ReportPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

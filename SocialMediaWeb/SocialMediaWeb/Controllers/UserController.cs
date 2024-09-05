@@ -175,10 +175,10 @@ namespace SocialMediaWeb.Controllers
                         TempData["ErrorMessage"] = "Old password is incorrect";
                     }
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    // Handle exceptions
-                    Console.WriteLine(ex.Message);
+                    
+                    Console.WriteLine(exception.Message);
                     ModelState.AddModelError("", "An error occurred while changing the password.");
                 }
             }
@@ -188,7 +188,10 @@ namespace SocialMediaWeb.Controllers
 
 
 
-
+        /// <summary>
+        /// User can add a new post
+        /// </summary>
+        /// <returns></returns>
         public ActionResult AddPost()
         {
             return View();
@@ -203,6 +206,7 @@ namespace SocialMediaWeb.Controllers
                 try
                 {
                     string imageBase64 = null;
+                    string imageType = null;
 
                     if (model.ImageFile != null && model.ImageFile.ContentLength > 0)
                     {
@@ -211,6 +215,7 @@ namespace SocialMediaWeb.Controllers
                             model.ImageFile.InputStream.CopyTo(memoryStream);
                             byte[] imageBytes = memoryStream.ToArray();
                             imageBase64 = Convert.ToBase64String(imageBytes);
+                            imageType= model.ImageFile.ContentType;
                         }
                     }
 
@@ -222,16 +227,17 @@ namespace SocialMediaWeb.Controllers
                         UserId = userId,
                         Content = model.Content,
                         ImageUrl = imageBase64,
-                        CreatedAt = createdAt
+                        CreatedAt = createdAt,
+                        ImageType= imageType
                     };
 
                     userRepository.AddPost(post);
-                    return RedirectToAction("UserDashboard"); // Redirect to a suitable page
+                    return RedirectToAction("UserDashboard"); 
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    // Handle exception
-                    Console.WriteLine(ex.Message);
+                   
+                    Console.WriteLine(exception.Message);
                     ModelState.AddModelError("", "An error occurred while adding the post.");
                 }
             }
@@ -240,9 +246,90 @@ namespace SocialMediaWeb.Controllers
         }
 
 
+        /// <summary>
+        /// managing the post particular user added. 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ManagePost()
+        {
+            try
+            {
+                var userId = (int)Session["UserId"]; 
+                var posts = userRepository.GetPostsByUserId(userId);
+                return View(posts);
+            }
+            catch (Exception exception)
+            {
+                
+                Console.WriteLine(exception.Message);
+                return RedirectToAction("UserDashboard");
+            }
+        }
 
 
+    /// <summary>
+    /// Delete a post which is added by the corresponding user
+    /// </summary>
+    /// <param name="id">id of logged in user </param>
+    /// <returns></returns>
+        public ActionResult DeletePost(int id)
+        {
+            try
+            {
 
+                userRepository.DeletePost(id); 
+                return RedirectToAction("ManagePost");
+            }
+            catch (Exception exception)
+            {
+                
+                Console.WriteLine(exception.Message);
+                return RedirectToAction("ManagePost");
+            }
+        }
+
+
+        /// <summary>
+        /// User can report the post if some harmful content is there.
+        /// </summary>
+        /// <param name="id">id of the corresponting post </param>
+        /// <returns></returns>
+        public ActionResult ReportPost(int id)
+        {
+            var post = userRepository.GetPostById(id);
+            if (post == null)
+            {
+                return HttpNotFound();
+            }
+
+            var viewModel = new ReportPostViewModel
+            {
+                PostId = post.PostId,
+                Content = post.Content,
+                ImageUrl = post.ImageUrl,
+                ReportedBy = (int)Session["UserID"]  
+            };
+
+            return View(viewModel);
+        }
+
+        /// <summary>
+        /// store the data that reported by user
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult ReportPost(ReportPostViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                userRepository.SaveReport(model.PostId, model.Reason, model.ReportedBy);
+                TempData["PostReported"] = "You reported the post";
+                return RedirectToAction("UserDashboard");
+            }
+
+            return View(model);
+        }
 
     }
 }

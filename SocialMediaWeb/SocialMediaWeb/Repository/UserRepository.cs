@@ -47,7 +47,8 @@ namespace SocialMediaWeb.Repository
                                 LastName = reader["lastName"].ToString(),
                                 DateOfBirth = Convert.ToDateTime(reader["dateOfBirth"]),
                                 Gender = reader["gender"].ToString(),
-                                ProfilePicture = reader["profilePicture"].ToString(),
+                                ProfilePicture = reader["profilePicture"].ToString() ,
+                                
                                 PhoneNumber = reader["phoneNumber"].ToString(),
                                 Address = reader["address"].ToString(),
                                 StateName = reader["StateName"].ToString(),
@@ -132,7 +133,11 @@ namespace SocialMediaWeb.Repository
             }
         }
 
-
+        /// <summary>
+        /// for changing the password
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="newPassword"></param>
         public void UpdatePassword(string email, string newPassword)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -150,31 +155,38 @@ namespace SocialMediaWeb.Repository
         }
 
 
+        /// <summary>
+        /// add post
+        /// </summary>
+        /// <param name="post"> consist of the post details</param>
         public void AddPost(Post post)
         {
-                using (var con = new SqlConnection(connectionString))
+                using (var connection = new SqlConnection(connectionString))
                 {
-                    using (var cmd = new SqlCommand("SPI_Post", con))
+                    using (var command = new SqlCommand("SPI_Post", connection))
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                         cmd.Parameters.AddWithValue("@userId", post.UserId);
-                         cmd.Parameters.AddWithValue("@content", post.Content);
-                         cmd.Parameters.AddWithValue("@imageUrl", post.ImageUrl);
-                         cmd.Parameters.AddWithValue("@createdAt", post.CreatedAt);
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@userId", post.UserId);
+                         command.Parameters.AddWithValue("@content", post.Content);
+                         command.Parameters.AddWithValue("@imageUrl", post.ImageUrl);
+                         command.Parameters.AddWithValue("@createdAt", post.CreatedAt);
+                        command.Parameters.AddWithValue("@imageType", post.ImageType);
 
-                        con.Open();
-                        cmd.ExecuteNonQuery();
+                    connection.Open();
+                    command.ExecuteNonQuery();
                     }
                 }   
         }
 
 
+        /// <summary>
+        /// retrive all the post
+        /// </summary>
+        /// <returns></returns>
         public List<PostDisplayViewModel> GetAllPost()
         {
             List<PostDisplayViewModel> posts = new List<PostDisplayViewModel>();
 
-            try
-            {
                 using (var connection = new SqlConnection(connectionString))
                 {
                     using (var command = new SqlCommand("SPS_Post", connection))
@@ -193,27 +205,131 @@ namespace SocialMediaWeb.Repository
                                     Email = reader["email"].ToString(),
                                     FirstName = reader["firstName"].ToString(),
                                     LastName = reader["lastName"].ToString(),
+                                    ProfilePicture = reader["profilePicture"].ToString(),
                                     Content = reader["content"].ToString(),
                                     ImageUrl = reader["imageUrl"] != DBNull.Value ? reader["imageUrl"].ToString() : null,
-                                    CreatedAt = Convert.ToDateTime(reader["createdAt"])
+                                   
+                                    CreatedAt = Convert.ToDateTime(reader["createdAt"]),
+                                    LikeCount = Convert.ToInt32(reader["likeCount"])
                                 };
 
                                 posts.Add(post);
                             }
                         }
                     }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Handle exception
-                Console.WriteLine(ex.Message);
-                throw;
+                
             }
 
             return posts;
         }
 
+
+        /// <summary>
+        /// get the post added by logged in user
+        /// </summary>
+        /// <param name="userId">login user id</param>
+        /// <returns></returns>
+        public List<Post> GetPostsByUserId(int userId)
+        {
+            List<Post> posts = new List<Post>();
+
+
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    using (var cmd = new SqlCommand("SPS_GetPostsByUserId", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@userId", userId);
+
+                        connection.Open();
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                posts.Add(new Post
+                                {
+                                    PostId = (int)reader["postId"],
+                                    UserId = (int)reader["userId"],
+                                    Content = reader["content"].ToString(),
+                                    ImageUrl = reader["imageUrl"].ToString(),
+                                    CreatedAt = (DateTime)reader["createdAt"]
+                                });
+                            }
+                        }
+                    }
+                }
+
+            return posts;
+        }
+
+        /// <summary>
+        /// For deleting the post added by 
+        /// </summary>
+        /// <param name="postId"></param>
+        public void DeletePost(int postId)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPD_Post", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@postId", postId);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        /// <summary>
+        /// got get a particular post
+        /// </summary>
+        /// <param name="postId"></param>
+        /// <returns></returns>
+        public Post GetPostById(int postId)
+        {
+            Post post = null;
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand("SPS_PostById", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PostId", postId);
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        post = new Post
+                        {
+                            PostId = (int)reader["postId"],
+                            Content = reader["content"].ToString(),
+                            ImageUrl = reader["imageUrl"].ToString()
+                        };
+                    }
+                }
+            }
+            return post;
+        }
+
+        /// <summary>
+        /// store the data that a user is reported 
+        /// </summary>
+        /// <param name="postId"></param>
+        /// <param name="reason"></param>
+        /// <param name="reportedBy"></param>
+        public void SaveReport(int postId, string reason, int reportedBy)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand("SPI_ReportPost", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PostId", postId);
+                command.Parameters.AddWithValue("@Reason", reason);
+                command.Parameters.AddWithValue("@ReportedBy", reportedBy);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
 
 
     }
