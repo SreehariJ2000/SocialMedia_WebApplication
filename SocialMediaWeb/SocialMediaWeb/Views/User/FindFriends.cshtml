@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "FindFriends";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<h2>Search for your friends </h2>
+
+<div class="form-group">
+    <input type="text" id="searchInput" class="" placeholder="find friends" />
+</div>
+
+<div id="searchResults"></div> 
+
+@section Scripts {
+   <script src="~/Scripts/CustomScript/HomeScript/FindFriends.js"></script>
+}

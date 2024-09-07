@@ -1,0 +1,54 @@
+﻿.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 20px auto;
+    padding: 20px;
+     
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.profile-picture img {
+    border-radius: 50%; 
+    width: 150px;
+    height: 150px;
+    
+    margin-bottom: 10px;
+}
+
+
+
+.follower-details {
+    display: flex;
+    gap: 15px; 
+    align-items: center;
+}
+
+    .follower-details button {
+        padding: 10px 20px;        
+        background-color: blue;
+        color: white;
+        border: none;
+    }
+
+        .follower-details button:hover {
+            background-color: darkblue;
+        }
+
+    .follower-details span {
+        font-size: 20px;
+        color:grey;
+    }
+
+.image-post {
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+    
+}

@@ -4,32 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link rel="stylesheet" href="~/Content/Site.css" />
+    <link rel="stylesheet" href="~/Content/Site.css?v=@DateTime.Now.Ticks" />
 </head>
 <body class="body-section">
     <nav class="navbar">
         <div class="navbar-container">
-            <!-- Logo and Application Name -->
             <a href="@Url.Action("Index", "Home")" class="navbar-brand">
               
                 <img src="~/Content/Images/images-modified.png" alt="Logo" class="logo" />
                 <h1>Connectify</h1>
             </a>
-
-            <!-- Navbar Links -->
-            <div class="navbar-links">
-                <ul>
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-
-            <!-- Sign-In/Sign-Up Links -->
             <div class="auth-links">
                 <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About us", "About", "Home")</li>
+
                     <li>@Html.ActionLink("Sign in", "Login", "Authentication")</li>
                     <li>@Html.ActionLink("Sign up", "Signup", "Authentication")</li>
+                    <li>@Html.ActionLink("Contact us", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>

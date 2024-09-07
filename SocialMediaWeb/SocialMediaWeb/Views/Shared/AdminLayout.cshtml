@@ -7,9 +7,11 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdminLayout</title>
     <link href="~/Content/CustomCSS/AdminCSS/AdminLayout.css" rel="stylesheet" />
+    @RenderSection("CustomStyles", required: false)
 </head>
 <body>
     <div class="Title-bar">
@@ -17,21 +19,30 @@
             <img src="~/Content/Images/images-modified.png" alt="Logo" class="logo" />
             <span class="site-name">Connectify</span>
         </div>
+
+        <div class="username"> @Session["UserEmail"]</div>
+
     </div>
 
 
     <ul class="sidebar-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">Add post</a></li>
-        <li><a href="#news">Profile</a></li>
-        <li><a href="#news">Change Password</a></li>
+        <li>@Html.ActionLink("Home", "AdminDashboard", "Admin")</li>
+
+        <li>@Html.ActionLink("Add post", "AdminAddPost", "Admin")</li>
+
+        <li>@Html.ActionLink("Reported post", "ReportedPost", "Admin")</li>
+
         <li>@Html.ActionLink("Logout", "Logout", "Authentication")</li>
-        
+
     </ul>
 
     <div class="content">
         @RenderBody()
     </div>
+
+
+    <script src="~/bundles/jquery"></script>
+    <script src="~/bundles/bootstrap"></script>
 
 </body>
 </html>

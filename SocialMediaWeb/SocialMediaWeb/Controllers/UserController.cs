@@ -2,8 +2,10 @@
 using SocialMediaWeb.Repository;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -21,13 +23,18 @@ namespace SocialMediaWeb.Controllers
                 var posts = userRepository.GetAllPost();
                 return View(posts);
             }
+            catch (SqlException sqlEx)
+            {
+                System.Diagnostics.Debug.WriteLine($"SQL Error {sqlEx.Number}: {sqlEx.Message}");
+                return Content("Database error occurred.");
+            }
             catch (Exception ex)
             {
-                // Handle exception
-                Console.WriteLine(ex.Message);
-                return View(new List<PostDisplayViewModel>());
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+                return Content("An error occurred.");
             }
-            
+
+
         }
 
 
@@ -75,7 +82,7 @@ namespace SocialMediaWeb.Controllers
                     return HttpNotFound();
                 }
 
-                var viewModel = new SignupViewModel
+                var viewModel = new Signup
                 {
                     Email = user.Email,
                     FirstName = user.FirstName,
@@ -106,7 +113,7 @@ namespace SocialMediaWeb.Controllers
         /// <returns>  </returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditProfile(SignupViewModel model)
+        public ActionResult EditProfile(Signup signup)
         {
             if (ModelState.IsValid)
             {
@@ -114,16 +121,16 @@ namespace SocialMediaWeb.Controllers
                 {
                     string profilePicturePath = null;
 
-                    if (model.ProfilePicture != null && model.ProfilePicture.ContentLength > 0)
+                    if (signup.ProfilePicture != null && signup.ProfilePicture.ContentLength > 0)
                     {
-                        var fileName = Path.GetFileName(model.ProfilePicture.FileName);
+                        var fileName = Path.GetFileName(signup.ProfilePicture.FileName);
                         var path = Path.Combine(Server.MapPath("~/Content/Images/ProfilePicture"), fileName);
-                        model.ProfilePicture.SaveAs(path);
+                        signup.ProfilePicture.SaveAs(path);
                         profilePicturePath = "/Content/Images/ProfilePicture/" + fileName;
                     }
                     int userId = Convert.ToInt32(Session["UserID"]);
-                    userRepository.UpdateUserProfile(model, profilePicturePath, userId);
-                    return Content("ProfileUpdatedSuccess"); 
+                    userRepository.UpdateUserProfile(signup, profilePicturePath, userId);
+                    return RedirectToAction("ViewProfile", "User"); 
                 }
                 catch (Exception ex)
                 {
@@ -132,7 +139,7 @@ namespace SocialMediaWeb.Controllers
                     return Content("Error updating profile.");
                 }
             }
-            return View(model);
+            return View(signup);
         }
 
 
@@ -154,17 +161,17 @@ namespace SocialMediaWeb.Controllers
         /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ChangePassword(ChangePasswordViewModel model)
+        public ActionResult ChangePassword(ChangePassword changePassword)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
                     string userEmail = Session["UserEmail"].ToString();
-                    var user = authenticationRepository.AuthenticateUser(userEmail, model.OldPassword);
+                    var user = authenticationRepository.AuthenticateUser(userEmail, changePassword.OldPassword);
                     if (user != null)
                     {
-                        string hashedNewPassword = BCrypt.Net.BCrypt.HashPassword(model.NewPassword);
+                        string hashedNewPassword = BCrypt.Net.BCrypt.HashPassword(changePassword.NewPassword);
                         userRepository.UpdatePassword(userEmail, hashedNewPassword);
 
                         return RedirectToAction("Login", "Authentication"); 
@@ -183,7 +190,7 @@ namespace SocialMediaWeb.Controllers
                 }
             }
 
-            return View(model);
+            return View(changePassword);
         }
 
 
@@ -199,7 +206,7 @@ namespace SocialMediaWeb.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult AddPost(PostViewModel model)
+        public ActionResult AddPost(PostViewModel postViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -208,14 +215,14 @@ namespace SocialMediaWeb.Controllers
                     string imageBase64 = null;
                     string imageType = null;
 
-                    if (model.ImageFile != null && model.ImageFile.ContentLength > 0)
+                    if (postViewModel.ImageFile != null && postViewModel.ImageFile.ContentLength > 0)
                     {
                         using (var memoryStream = new MemoryStream())
                         {
-                            model.ImageFile.InputStream.CopyTo(memoryStream);
+                            postViewModel.ImageFile.InputStream.CopyTo(memoryStream);
                             byte[] imageBytes = memoryStream.ToArray();
                             imageBase64 = Convert.ToBase64String(imageBytes);
-                            imageType= model.ImageFile.ContentType;
+                            imageType= postViewModel.ImageFile.ContentType;
                         }
                     }
 
@@ -225,7 +232,7 @@ namespace SocialMediaWeb.Controllers
                     var post = new Post
                     {
                         UserId = userId,
-                        Content = model.Content,
+                        Content = postViewModel.Content,
                         ImageUrl = imageBase64,
                         CreatedAt = createdAt,
                         ImageType= imageType
@@ -242,7 +249,7 @@ namespace SocialMediaWeb.Controllers
                 }
             }
 
-            return View("AddPost", model);
+            return View("AddPost", postViewModel);
         }
 
 
@@ -276,13 +283,11 @@ namespace SocialMediaWeb.Controllers
         {
             try
             {
-
                 userRepository.DeletePost(id); 
                 return RedirectToAction("ManagePost");
             }
             catch (Exception exception)
-            {
-                
+            {          
                 Console.WriteLine(exception.Message);
                 return RedirectToAction("ManagePost");
             }
@@ -296,22 +301,31 @@ namespace SocialMediaWeb.Controllers
         /// <returns></returns>
         public ActionResult ReportPost(int id)
         {
-            var post = userRepository.GetPostById(id);
-            if (post == null)
+            try
             {
-                return HttpNotFound();
+                var post = userRepository.GetPostById(id);
+                if (post == null)
+                {
+                    return HttpNotFound();
+                }
+
+                var viewModel = new ReportPost
+                {
+                    PostId = post.PostId,
+                    Content = post.Content,
+                    ImageUrl = post.ImageUrl,
+                    ReportedBy = (int)Session["UserID"]
+                };
+
+                return View(viewModel);
             }
-
-            var viewModel = new ReportPostViewModel
+            catch (Exception ex)
             {
-                PostId = post.PostId,
-                Content = post.Content,
-                ImageUrl = post.ImageUrl,
-                ReportedBy = (int)Session["UserID"]  
-            };
-
-            return View(viewModel);
+               Console.Write(ex.Message);
+                return RedirectToAction("UserDashboard");
+            }
         }
+
 
         /// <summary>
         /// store the data that reported by user
@@ -319,16 +333,83 @@ namespace SocialMediaWeb.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult ReportPost(ReportPostViewModel model)
+        public ActionResult ReportPost(ReportPost reportPost)
         {
-            if (ModelState.IsValid)
+            try
             {
-                userRepository.SaveReport(model.PostId, model.Reason, model.ReportedBy);
-                TempData["PostReported"] = "You reported the post";
-                return RedirectToAction("UserDashboard");
-            }
+                if (ModelState.IsValid)
+                {
+                    userRepository.SaveReport(reportPost.PostId, reportPost.Reason, reportPost.ReportedBy);
+                    TempData["PostReported"] = "You reported the post";
+                    return RedirectToAction("UserDashboard");
+                }
 
-            return View(model);
+                return View(reportPost);
+            }
+            catch(Exception exception)
+            {
+            
+                Console.WriteLine(exception.Message);
+                return RedirectToAction("UserDashboard");
+             }
+           
+        }
+
+        /// <summary>
+        /// navigate to friends  page
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult FindFriends()
+        {
+            return View();
+        }
+
+
+        /// <summary>
+        /// search friends based on name
+        /// </summary>
+        /// <param name="searchTerm"></param>
+        /// <returns></returns>
+        public ActionResult SearchFriends(string searchTerm)
+        {
+            var profiles = userRepository.SearchProfiles(searchTerm);
+            var baseUrl = Request.Url.GetLeftPart(UriPartial.Authority) + Url.Content("~");
+
+            var result = profiles.Select(p => new
+            {
+                p.UserID,
+                p.FirstName,
+                p.LastName,
+                ProfilePicture = string.IsNullOrEmpty(p.ProfilePicture) ? null : baseUrl + p.ProfilePicture
+            });
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+
+
+        /// <summary>
+        /// To view friends profile
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public ActionResult ViewFriendsProfile(int userId)
+        {
+            try {
+                var profile = userRepository.GetUserDetails(userId);
+                var posts = userRepository.GetPostsByUserId(userId);
+                var viewModel = new FriendsProfile
+                {
+                    Profile = profile,
+                    Posts = posts
+                };
+
+                return View(viewModel);
+            }
+            catch (Exception exception) { 
+                Console.WriteLine(exception.Message);
+                return RedirectToAction("FindFriends");
+            }
+            
         }
 
     }

@@ -37,4 +37,17 @@ namespace SocialMediaWeb.Models
         [Required]
         public int DistrictID { get; set; } 
     }
+
+
+    /// <summary>
+    /// search the profile of user
+    /// </summary>
+    public class ProfileSearchResultViewModel
+    {
+        public int UserID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string ProfilePicture { get; set; }  
+    }
+
 }

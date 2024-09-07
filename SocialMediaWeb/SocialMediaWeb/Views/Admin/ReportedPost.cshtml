@@ -1,0 +1,49 @@
+﻿
+
+@model List<SocialMediaWeb.Models.ReportedPostViewModel>
+@{
+    ViewBag.Title = "Reported Posts";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+@if (TempData["PostDelete"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["PostDelete"]
+    </div>
+}
+
+<h2>Reported Posts</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Report ID</th>
+            <th>Post ID</th>
+            <th>Content</th>
+            <th>Image</th>
+            <th>Reason</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ReportId</td>
+                <td>@item.PostId</td>
+                <td>@item.Content</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <img src="data:image;base64,@item.ImageUrl" alt="Post Image" class="post-picture" height="100px" width="100px" />
+                    }
+                </td>
+                <td>@item.Reason</td>
+                <td>
+                    @Html.ActionLink("Delete", "DeleteReportedPost", "Admin", new { id = item.PostId }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

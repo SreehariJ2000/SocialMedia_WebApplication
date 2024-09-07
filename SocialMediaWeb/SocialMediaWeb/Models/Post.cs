@@ -40,7 +40,7 @@ namespace SocialMediaWeb.Models
     }
 
     //report the post
-    public class ReportPostViewModel
+    public class ReportPost
     {
         public int PostId { get; set; }          
         public string Content { get; set; }      
@@ -48,6 +48,24 @@ namespace SocialMediaWeb.Models
         public string Reason { get; set; }      
         public int ReportedBy { get; set; }      
     }
+
+    //get the reported post to admin
+    public class ReportedPostViewModel
+    {
+        public int ReportId { get; set; }
+        public int PostId { get; set; }
+        public string Content { get; set; }
+        public string ImageUrl { get; set; }
+        public string Reason { get; set; }
+    }
+
+    public class FriendsProfile
+    {
+        public ProfileViewModel Profile { get; set; }
+        public List<Post> Posts { get; set; }
+    }
+
+
 
 
 }

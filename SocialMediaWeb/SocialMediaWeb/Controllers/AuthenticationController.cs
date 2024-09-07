@@ -42,7 +42,7 @@ namespace SocialMediaWeb.Controllers
         /// 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Signup(SignupViewModel model)
+        public ActionResult Signup(Signup signup)
         {
             if (ModelState.IsValid)
             {
@@ -50,33 +50,33 @@ namespace SocialMediaWeb.Controllers
                 {
                     string profilePicturePath = null;
                       
-                    if (model.ProfilePicture != null && model.ProfilePicture.ContentLength > 0)
+                    if (signup.ProfilePicture != null && signup.ProfilePicture.ContentLength > 0)
                     {
-                        var fileName = Path.GetFileName(model.ProfilePicture.FileName);
+                        var fileName = Path.GetFileName(signup.ProfilePicture.FileName);
                         var path = Path.Combine(Server.MapPath("~/Content/Images/ProfilePicture"), fileName);
-                        model.ProfilePicture.SaveAs(path);
+                        signup.ProfilePicture.SaveAs(path);
                         profilePicturePath = "/Content/Images/ProfilePicture/" + fileName;
                     }
 
-                    string hashedPassword = BCrypt.Net.BCrypt.HashPassword(model.UserPassword);
+                    string hashedPassword = BCrypt.Net.BCrypt.HashPassword(signup.UserPassword);
 
                     Users user = new Users
                     {
-                        Email = model.Email,
+                        Email = signup.Email,
                         UserPassword = hashedPassword
                     };
 
                     Profile profile = new Profile
                     {
-                        FirstName = model.FirstName,
-                        LastName = model.LastName,
-                        DateOfBirth = model.DateOfBirth,
-                        Gender = model.Gender,
+                        FirstName = signup.FirstName,
+                        LastName = signup.LastName,
+                        DateOfBirth = signup.DateOfBirth,
+                        Gender = signup.Gender,
                         ProfilePicture = profilePicturePath,
-                        PhoneNumber = model.PhoneNumber,
-                        Address = model.Address,
-                        StateID = model.StateID,
-                        DistrictID = model.DistrictID
+                        PhoneNumber = signup.PhoneNumber,
+                        Address = signup.Address,
+                        StateID = signup.StateID,
+                        DistrictID = signup.DistrictID
                     };
 
                     authenticationRepository.AddUser(user, profile);
@@ -101,12 +101,12 @@ namespace SocialMediaWeb.Controllers
                 return Content("error5");
             }
 
-            return View(model);
+            return View(signup);
         }
 
 
         /// <summary>
-        ///  For detting the district base on state id . It will pass to the signup form as dropdowm. 
+        ///  For getting the district base on state id . It will pass to the signup form as dropdowm. 
         /// </summary>
         /// <param name="stateId">  get from the signup form .
         /// used to fetch corresponding district based on state </param>

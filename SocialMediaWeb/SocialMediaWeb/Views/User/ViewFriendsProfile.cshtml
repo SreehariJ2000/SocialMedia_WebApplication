@@ -1,0 +1,48 @@
+﻿@model SocialMediaWeb.Models.FriendsProfile
+@{
+    ViewBag.Title = "ViewFriendsProfile";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+<link href="~/Content/CustomCSS/UserCSS/ViewFriendsProfile.css" rel="stylesheet" />
+<div class="profile-container">  
+    <div class="flex-container">
+        <div class="profile-picture">
+            @if (!string.IsNullOrEmpty(Model.Profile.ProfilePicture))
+            {
+                <img src="@Url.Content(Model.Profile.ProfilePicture)" alt="Profile Picture" width="150" height="150" />
+            }
+            else
+            {
+                <p>No Profile Picture</p>
+            }
+        </div>
+
+        <div class="name">
+            <h2>@Model.Profile.FirstName @Model.Profile.LastName</h2>
+        </div>
+
+        <div class="follower-details">
+                <button>follow</button> @Model.Profile.UserID
+                 <span>following 0</span>
+                 <span>followers 0</span>          
+        </div>
+
+        <div class="posts">
+
+            @foreach (var post in Model.Posts)
+            {
+                if (!string.IsNullOrEmpty(post.ImageUrl))
+                {
+                    <img src="data:image/jpeg;base64,@post.ImageUrl" alt="Post Image" class="image-post" />
+                }
+
+            }
+
+        </div>
+
+    </div>
+
+    
+    
+
+</div>

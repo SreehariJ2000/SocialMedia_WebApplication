@@ -4,7 +4,7 @@ using System.Web;
 
 namespace SocialMediaWeb.Models
 {
-    public class SignupViewModel
+    public class Signup
     {
         public int UserID { get; set; }
         [Required]

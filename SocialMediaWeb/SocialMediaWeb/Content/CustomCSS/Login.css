@@ -1,0 +1,80 @@
+﻿/* Login Page Styles */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #D3D3D3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom:50px;
+}
+
+.form-group {
+
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-container {
+    width: 100%;
+}
+
+.control-label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+
+.sign-up-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .sign-up-container p {
+        font-size: 14px;
+    }
+
+    .sign-up-container a {
+        color: #007bff;
+    }
+
+        .sign-up-container a:hover {
+            text-decoration: underline;
+        }

@@ -56,7 +56,7 @@ namespace SocialMediaWeb.Models
 
 
     //Change password
-    public class ChangePasswordViewModel
+    public class ChangePassword
     {
         [Required]
         [DataType(DataType.Password)]

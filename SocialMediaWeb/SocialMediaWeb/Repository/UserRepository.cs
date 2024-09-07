@@ -14,7 +14,16 @@ namespace SocialMediaWeb.Repository
 
         public UserRepository()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["SocialMediaDBConnectionString"].ConnectionString;
+            try
+            {
+
+
+                connectionString = ConfigurationManager.ConnectionStrings["SocialMediaDBConnectionString"].ConnectionString;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         /// <summary>
@@ -106,7 +115,7 @@ namespace SocialMediaWeb.Repository
         /// </summary>
         /// <param name="model"> remaning user details</param>
         /// <param name="profilePicturePath">profile picture path </param>
-        public void UpdateUserProfile(SignupViewModel model, string profilePicturePath ,int UserID)
+        public void UpdateUserProfile(Signup signup, string profilePicturePath ,int UserID)
         {
 
             using (var connection = new SqlConnection(connectionString))
@@ -117,16 +126,16 @@ namespace SocialMediaWeb.Repository
                 };
 
                 command.Parameters.AddWithValue("@UserID", UserID);
-                command.Parameters.AddWithValue("@Email", model.Email);
-                command.Parameters.AddWithValue("@FirstName", model.FirstName);
-                command.Parameters.AddWithValue("@LastName", model.LastName);
-                command.Parameters.AddWithValue("@DateOfBirth", model.DateOfBirth);
-                command.Parameters.AddWithValue("@Gender", model.Gender);
+                command.Parameters.AddWithValue("@Email", signup.Email);
+                command.Parameters.AddWithValue("@FirstName", signup.FirstName);
+                command.Parameters.AddWithValue("@LastName", signup.LastName);
+                command.Parameters.AddWithValue("@DateOfBirth", signup.DateOfBirth);
+                command.Parameters.AddWithValue("@Gender", signup.Gender);
                 command.Parameters.AddWithValue("@ProfilePicture", profilePicturePath);
-                command.Parameters.AddWithValue("@PhoneNumber", model.PhoneNumber);
-                command.Parameters.AddWithValue("@Address", model.Address);
-                command.Parameters.AddWithValue("@StateID", model.StateID);
-                command.Parameters.AddWithValue("@DistrictID", model.DistrictID);
+                command.Parameters.AddWithValue("@PhoneNumber", signup.PhoneNumber);
+                command.Parameters.AddWithValue("@Address", signup.Address);
+                command.Parameters.AddWithValue("@StateID", signup.StateID);
+                command.Parameters.AddWithValue("@DistrictID", signup.DistrictID);
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -282,7 +291,7 @@ namespace SocialMediaWeb.Repository
         }
 
         /// <summary>
-        /// got get a particular post
+        ///  get a particular post . while clicking on report post.
         /// </summary>
         /// <param name="postId"></param>
         /// <returns></returns>
@@ -330,6 +339,34 @@ namespace SocialMediaWeb.Repository
                 command.ExecuteNonQuery();
             }
         }
+
+
+        public List<ProfileSearchResultViewModel> SearchProfiles(string searchTerm)
+        {
+            var profiles = new List<ProfileSearchResultViewModel>();
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPS_SearchProfiles", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@SearchTerm", searchTerm);
+                    connection.Open();
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        profiles.Add(new ProfileSearchResultViewModel
+                        {
+                            UserID = Convert.ToInt32(reader["userID"]),
+                            FirstName = reader["firstName"].ToString(),
+                            LastName = reader["lastName"].ToString(),
+                            ProfilePicture = reader["profilePicture"] .ToString(),
+                        });
+                    }
+                }
+            }
+            return profiles;
+        }
+
 
 
     }

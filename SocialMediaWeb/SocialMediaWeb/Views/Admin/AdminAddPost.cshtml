@@ -1,0 +1,27 @@
+﻿@model SocialMediaWeb.Models.PostViewModel
+@{
+    ViewBag.Title = "AdminAddPost";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+
+
+<h2>AddPost</h2>
+@using (Html.BeginForm("AdminAddPost", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="">
+        @Html.LabelFor(model => model.Content)
+        @Html.TextAreaFor(model => model.Content, new { @class = "" })
+    </div>
+
+    <div class="">
+        @Html.LabelFor(model => model.ImageFile)
+        @Html.TextBoxFor(model => model.ImageFile, new { type = "file", @class = "" })
+    </div>
+
+    <button type="submit" class="">Submit</button>
+}
