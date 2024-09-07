@@ -63,6 +63,9 @@ namespace SocialMediaWeb.Models
     {
         public ProfileViewModel Profile { get; set; }
         public List<Post> Posts { get; set; }
+        public bool IsFollower { get; set; }
+        public int FollowersCount { get; set; }
+        public int FollowingCount { get; set; }
     }
 
 

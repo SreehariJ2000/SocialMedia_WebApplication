@@ -397,10 +397,18 @@ namespace SocialMediaWeb.Controllers
             try {
                 var profile = userRepository.GetUserDetails(userId);
                 var posts = userRepository.GetPostsByUserId(userId);
+                var loggedInUserId = Convert.ToInt32(Session["UserID"]);
+                var isFollowing = userRepository.IsUserFollowing(loggedInUserId, profile.UserID);
+                var followersCount = userRepository.GetFollowersCount(profile.UserID);
+                var followingCount = userRepository.GetFollowingCount(profile.UserID);
+
                 var viewModel = new FriendsProfile
                 {
                     Profile = profile,
-                    Posts = posts
+                    Posts = posts,
+                    IsFollower = isFollowing,
+                    FollowersCount = followersCount,
+                    FollowingCount = followingCount
                 };
 
                 return View(viewModel);
@@ -411,6 +419,43 @@ namespace SocialMediaWeb.Controllers
             }
             
         }
+
+
+
+        [HttpPost]
+        public ActionResult Follow(int userId)
+        {
+            try
+            {
+                var loggedInUserId = Convert.ToInt32(Session["UserID"]);
+                userRepository.FollowUser(loggedInUserId, userId);
+
+                return RedirectToAction("ViewFriendsProfile", new { userId });
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                return View("Error");
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Unfollow(int userId)
+        {
+            try
+            {
+                var loggedInUserId = Convert.ToInt32(Session["UserID"]);
+                userRepository.UnfollowUser(loggedInUserId, userId);
+
+                return RedirectToAction("ViewFriendsProfile", new { userId });
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                return View("Error");
+            }
+        }
+
 
     }
 }

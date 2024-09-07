@@ -369,5 +369,92 @@ namespace SocialMediaWeb.Repository
 
 
 
+        public bool IsUserFollowing(int loggedInUserId, int profileUserId)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPS_IsUserFollowing", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@LoggedInUserId", loggedInUserId);
+                    command.Parameters.AddWithValue("@ProfileUserId", profileUserId);
+
+                    connection.Open();
+                    var result = (int)command.ExecuteScalar();
+                    return result == 1;
+                }
+            }
+        }
+
+
+        public int GetFollowersCount(int userId)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPS_GetFollowersCount", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@UserId", userId);
+
+                    connection.Open();
+                    return (int)command.ExecuteScalar();
+                }
+            }
+        }
+
+        public int GetFollowingCount(int userId)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPS_GetFollowingCount", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@UserId", userId);
+
+                    connection.Open();
+                    return (int)command.ExecuteScalar();
+                }
+            }
+        }
+
+
+        public void FollowUser(int followerId, int followedId)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPI_FollowUser", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@FollowerId", followerId);
+                    command.Parameters.AddWithValue("@FollowedId", followedId);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void UnfollowUser(int followerId, int followedId)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPD_UnfollowUser", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@FollowerId", followerId);
+                    command.Parameters.AddWithValue("@FollowedId", followedId);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
+
+
+
+
     }
 }

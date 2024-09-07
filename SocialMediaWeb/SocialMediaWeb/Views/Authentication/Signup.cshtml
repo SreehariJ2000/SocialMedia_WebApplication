@@ -10,8 +10,9 @@
 @using (Html.BeginForm("Signup", "Authentication", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    <h2 class="heading">Signup</h2>
+  
     <div class="form-grid">
+        <div class="grid-item heading">  <h2>Signup</h2></div>
         <div class="grid-item">
             @Html.LabelFor(model => model.FirstName, new { @class = "form-label", id = "FirstNameLabel" })
         </div>

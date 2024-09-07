@@ -1,7 +1,11 @@
 ﻿
-.heading{
-    text-align:center;
+.grid-item.heading {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 20px;
 }
+
+
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -62,6 +66,7 @@ select.form-input {
 }
 
 .button {
-    grid-column: span 2; 
-    text-align: center; 
-    margin-top: 20px; 
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 20px;
+ 

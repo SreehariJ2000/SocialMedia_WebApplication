@@ -22,9 +22,27 @@
         </div>
 
         <div class="follower-details">
-                <button>follow</button> @Model.Profile.UserID
-                 <span>following 0</span>
-                 <span>followers 0</span>          
+            @if (Model.IsFollower)
+            {
+                
+                <form action="@Url.Action("Unfollow", "User", new { userId = Model.Profile.UserID })" method="post">
+                    <button type="submit" class="btn btn-danger">Unfollow</button>
+                </form>
+            }
+            else
+            {
+                
+                <form action="@Url.Action("Follow", "User", new { userId = Model.Profile.UserID })" method="post">
+                    <button type="submit" class="btn btn-primary">Follow</button>
+                </form>
+            }
+
+
+
+
+
+            <span>following  @Model.FollowingCount</span>
+            <span>followers @Model.FollowersCount</span>
         </div>
 
         <div class="posts">
