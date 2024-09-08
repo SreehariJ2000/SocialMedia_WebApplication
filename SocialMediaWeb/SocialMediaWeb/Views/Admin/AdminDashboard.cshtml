@@ -15,7 +15,9 @@
                     <div class="profile-picture">
                         @if (!string.IsNullOrEmpty(post.ProfilePicture))
                         {
-                            <img src="@Url.Content(post.ProfilePicture)" alt="Profile Picture" class="picture" />
+                            
+                            <img src="data:image/jpeg;base64,@post.ProfilePicture" alt="Profile Picture" class="picture" />
+
 
                         }
                     </div>

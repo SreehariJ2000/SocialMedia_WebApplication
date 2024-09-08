@@ -177,10 +177,14 @@
     <Content Include="Content\CustomCSS\HomeCSS\Home.css" />
     <Content Include="Content\CustomCSS\Login.css" />
     <Content Include="Content\CustomCSS\Signup.css" />
+    <Content Include="Content\CustomCSS\UserCSS\AddPost.css" />
+    <Content Include="Content\CustomCSS\UserCSS\EditProfile.css" />
     <Content Include="Content\CustomCSS\UserCSS\ManagePost.css" />
+    <Content Include="Content\CustomCSS\UserCSS\ReportPost.css" />
     <Content Include="Content\CustomCSS\UserCSS\UserDashboard.css" />
     <Content Include="Content\CustomCSS\UserCSS\UserLayout.css" />
     <Content Include="Content\CustomCSS\UserCSS\ViewFriendsProfile.css" />
+    <Content Include="Content\CustomCSS\UserCSS\ViewProfile.css" />
     <Content Include="Content\Images\carousel-image1.jpg" />
     <Content Include="Content\Images\carousel-image2.jpeg" />
     <Content Include="Content\Images\carousel-image3.jpeg" />
@@ -196,6 +200,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\CustomScript\AutoHideAlert.js" />
+    <Content Include="Scripts\CustomScript\HomeScript\AddPost.js" />
+    <Content Include="Scripts\CustomScript\HomeScript\EditProfile.js" />
     <Content Include="Scripts\CustomScript\HomeScript\FindFriends.js" />
     <Content Include="Scripts\CustomScript\HomeScript\HomeCarousel.js" />
     <Content Include="Scripts\CustomScript\Signup.js" />

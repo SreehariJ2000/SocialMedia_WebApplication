@@ -89,7 +89,7 @@ namespace SocialMediaWeb.Controllers
                     LastName = user.LastName,
                     DateOfBirth = user.DateOfBirth,
                     Gender = user.Gender,
-                    ProfilePicture = null, 
+                    ProfilePicture = user.ProfilePicture, 
                     PhoneNumber = user.PhoneNumber,
                     Address = user.Address,
                     StateID = user.StateID,
@@ -119,17 +119,25 @@ namespace SocialMediaWeb.Controllers
             {
                 try
                 {
-                    string profilePicturePath = null;
+                    string profilePicture = null;
 
-                    if (signup.ProfilePicture != null && signup.ProfilePicture.ContentLength > 0)
+
+                    if (Request.Files["ProfilePicture"] != null && Request.Files["ProfilePicture"].ContentLength > 0)
                     {
-                        var fileName = Path.GetFileName(signup.ProfilePicture.FileName);
-                        var path = Path.Combine(Server.MapPath("~/Content/Images/ProfilePicture"), fileName);
-                        signup.ProfilePicture.SaveAs(path);
-                        profilePicturePath = "/Content/Images/ProfilePicture/" + fileName;
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            var profilePictureFile = Request.Files["ProfilePicture"];
+                            profilePictureFile.InputStream.CopyTo(memoryStream);
+                            byte[] imageBytes = memoryStream.ToArray();
+                            profilePicture = Convert.ToBase64String(imageBytes);
+                        }
+                    }
+                    else
+                    {       
+                        profilePicture = signup.ProfilePicture; 
                     }
                     int userId = Convert.ToInt32(Session["UserID"]);
-                    userRepository.UpdateUserProfile(signup, profilePicturePath, userId);
+                    userRepository.UpdateUserProfile(signup, profilePicture, userId);
                     return RedirectToAction("ViewProfile", "User"); 
                 }
                 catch (Exception ex)
@@ -373,14 +381,13 @@ namespace SocialMediaWeb.Controllers
         public ActionResult SearchFriends(string searchTerm)
         {
             var profiles = userRepository.SearchProfiles(searchTerm);
-            var baseUrl = Request.Url.GetLeftPart(UriPartial.Authority) + Url.Content("~");
-
+            
             var result = profiles.Select(p => new
             {
                 p.UserID,
                 p.FirstName,
                 p.LastName,
-                ProfilePicture = string.IsNullOrEmpty(p.ProfilePicture) ? null : baseUrl + p.ProfilePicture
+                ProfilePicture = string.IsNullOrEmpty(p.ProfilePicture) ? null : "data:image/jpeg;base64," + p.ProfilePicture
             });
             return Json(result, JsonRequestBehavior.AllowGet);
         }

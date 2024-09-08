@@ -4,7 +4,7 @@
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link href="~/Content/CustomCSS/Login.css" rel="stylesheet" />
+<link href="~/Content/CustomCSS/Login.css?v=@DateTime.Now.Ticks" rel="stylesheet" />
 
 
 @using (Html.BeginForm())
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
 
 <div class="form-horizontal login-container">
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
     <h2>Sign in </h2>
 
     <div class="form-group">
@@ -37,7 +37,7 @@
             <label for="RememberMe">Remember Me</label>
         </div>
     </div>
-
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
     <div class="form-group">
         <div class="button-container">

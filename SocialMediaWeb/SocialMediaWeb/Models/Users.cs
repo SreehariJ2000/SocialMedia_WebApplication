@@ -28,12 +28,22 @@ namespace SocialMediaWeb.Models
         [Display(Name = "Name")]
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        [Display(Name = "Date of birth")]
         public DateTime DateOfBirth { get; set; }
         public string Gender { get; set; }
+
+        [Display(Name = "Profile picture")]
         public string ProfilePicture { get; set; }
+
+        [Display(Name = "Phone number")]
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
+
+        [Display(Name = "State")]
         public string StateName { get; set; }
+
+        [Display(Name = "District")]
         public string DistrictName { get; set; }
     }
 

@@ -18,7 +18,9 @@
         </div>
         <div class="grid-item">
             @Html.TextBoxFor(model => model.FirstName, new { @class = "form-input", id = "FirstName" })
-            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "error" })
+            <div>
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "error" , id = "FirstNameError" })
+            </div>
         </div>
 
         <div class="grid-item">
@@ -26,7 +28,9 @@
         </div>
         <div class="grid-item">
             @Html.TextBoxFor(model => model.LastName, new { @class = "form-input", id = "LastName" })
-            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "error" })
+            <div>
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "error", id = "LastNameError" })
+            </div>
         </div>
 
 
@@ -36,7 +40,9 @@
         </div>
         <div class="grid-item">
             @Html.TextBoxFor(model => model.DateOfBirth, "{0:yyyy-MM-dd}", new { @class = "form-input", id = "DateOfBirth", type = "date" })
-            @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "error" })
+            <div>
+                @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "error" })
+            </div>
         </div>
 
         <div class="grid-item">
@@ -48,7 +54,9 @@
                 @Html.RadioButtonFor(model => model.Gender, "F", new { id = "GenderF" }) <label for="GenderF">Female</label>
                 @Html.RadioButtonFor(model => model.Gender, "O", new { id = "GenderO" }) <label for="GenderO">Other</label>
             </div>
-            @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "error" })
+            <div>
+                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "error" , id = "GenderError" })
+            </div>
         </div>
 
         <div class="grid-item">
@@ -56,7 +64,9 @@
         </div>
         <div class="grid-item">
             @Html.TextAreaFor(model => model.Address, new { @class = "form-input", id = "Address" })
-            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "error" })
+            <div>
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "error" , id = "AddressError" })
+            </div>
         </div>
 
         <div class="grid-item">
@@ -64,28 +74,41 @@
         </div>
         <div class="grid-item">
             @Html.DropDownList("StateID", (IEnumerable<SelectListItem>)ViewBag.States, "Select State", new { @class = "form-input", id = "StateDropdown" })
+            <div>
+                <span id="StateError" class="error"></span>
+            </div>
         </div>
+        
 
         <div class="grid-item">
             @Html.Label("District", new { @class = "form-label", id = "DistrictLabel" })
         </div>
         <div class="grid-item">
             @Html.DropDownList("DistrictID", new List<SelectListItem>(), "Select District", new { @class = "form-input", id = "DistrictDropdown" })
+            <div>
+                <span id="DistrictError" class="error"></span>
+            </div>
+
         </div>
+       
 
         <div class="grid-item">
             @Html.LabelFor(model => model.ProfilePicture, new { @class = "form-label", id = "ProfilePictureLabel" })
         </div>
         <div class="grid-item">
-            @Html.TextBoxFor(model => model.ProfilePicture, new { type = "file", @class = "form-input", id = "ProfilePicture" })
-            @Html.ValidationMessageFor(model => model.ProfilePicture, "", new { @class = "error" })
+             <input type="file" name="ProfilePicture" class = "form-input" id = "ProfilePicture"/>
+            <div>
+                @Html.ValidationMessageFor(model => model.ProfilePicture, "", new { @class = "error" , id = "ProfilePictureError" })
+            </div>
         </div>
         <div class="grid-item">
             @Html.LabelFor(model => model.Email, new { @class = "form-label", id = "EmailLabel" })
         </div>
         <div class="grid-item">
             @Html.TextBoxFor(model => model.Email, new { @class = "form-input", id = "Email" })
-            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "error" })
+            <div>
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "error" , id = "EmailError" })
+            </div>
         </div>
 
         <div class="grid-item">
@@ -93,7 +116,9 @@
         </div>
         <div class="grid-item">
             @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-input", id = "PhoneNumber" })
-            @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "error" })
+            <div>
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "error" , id = "PhoneNumberError" })
+            </div>
         </div>
 
 
@@ -103,7 +128,9 @@
         </div>
         <div class="grid-item">
             @Html.PasswordFor(model => model.UserPassword, new { @class = "form-input", id = "UserPassword" })
-            @Html.ValidationMessageFor(model => model.UserPassword, "", new { @class = "error" })
+            <div>
+                @Html.ValidationMessageFor(model => model.UserPassword, "", new { @class = "error" , id = "UserPasswordError" })
+            </div>
         </div>
 
 
@@ -112,10 +139,14 @@
         </div>
         <div class="grid-item">
             <input type="password" class="form-input" id="confirm-password" />
+            <div>
+                <span id="ConfirmPasswordError" class="error"></span>
+            </div>
         </div>
 
         <div class="grid-item button">
-            <input type="submit" value="Signup" class="submit-button" />
+           
+            <input type="submit" value="Signup" class="submit-button" id="submitBtn" />
         </div>
     </div>
 }

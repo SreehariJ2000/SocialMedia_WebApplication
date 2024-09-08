@@ -1,0 +1,64 @@
+﻿.report-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.flex-item {
+    width: 100%; 
+    max-width: 600px; 
+    margin-bottom: 15px; 
+}
+
+.header {
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    width:500px;
+    height:200px;
+}
+
+.post-picture {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.reason {
+    text-align: center;
+}
+
+.reason-textarea {
+   width:500px;
+   height:100px;
+   
+    border-radius: 4px;
+    border: 1px solid #ccc; 
+    padding: 10px; 
+}
+
+
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+    .submit-button:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+    }

@@ -9,7 +9,9 @@
         <div class="profile-picture">
             @if (!string.IsNullOrEmpty(Model.Profile.ProfilePicture))
             {
-                <img src="@Url.Content(Model.Profile.ProfilePicture)" alt="Profile Picture" width="150" height="150" />
+                
+                <img src="data:image/jpeg;base64,@Model.Profile.ProfilePicture" alt="Profile Picture" width="150" height="150"  />
+
             }
             else
             {

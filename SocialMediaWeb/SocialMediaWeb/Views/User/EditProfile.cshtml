@@ -4,139 +4,149 @@
     ViewBag.Title = "EditProfile";
     Layout = "~/Views/Shared/UserLayout.cshtml";
 }
+<link href="~/Content/CustomCSS/UserCSS/EditProfile.css" rel="stylesheet" />
 
-<h2>EditProfile</h2>
 
 @using (Html.BeginForm("EditProfile", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<div class="form-grid">
+    <!-- Heading -->
+    <div class="grid-item heading">
+        <h2>Edit Profile</h2>
+    </div>
 
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.DateOfBirth, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
-                @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="radio">
-                    @Html.RadioButtonFor(model => model.Gender, "M", new { @id = "Male" }) Male
-                </div>
-                <div class="radio">
-                    @Html.RadioButtonFor(model => model.Gender, "F", new { @id = "Female" }) Female
-                </div>
-                <div class="radio">
-                    @Html.RadioButtonFor(model => model.Gender, "O", new { @id = "Other" }) Other
-                </div>
-                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.Label("State")
-            @Html.DropDownList("StateID", (IEnumerable<SelectListItem>)ViewBag.States, "Select State", new { @class = "form-control", id = "StateDropdown" })
-        </div>
-
-        <div class="form-group">
-            @Html.Label("District")
-            @Html.DropDownList("DistrictID", new List<SelectListItem>(), "Select District", new { @class = "form-control", id = "DistrictDropdown" })
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.ProfilePicture)
-            <input type="file" name="ProfilePicture" class="form-control" />
-            @Html.ValidationMessageFor(model => model.ProfilePicture, "", new { @class = "text-danger" })
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
+    <!-- First Name -->
+    <div class="grid-item">
+        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "form-label" })
+    </div>
+    <div class="grid-item">
+        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-input", id = "FirstName" } })
+        <div>
+            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "error", id = "FirstNameError" })
         </div>
     </div>
-}
 
-<div>
+    <!-- Last Name -->
+    <div class="grid-item">
+        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "form-label" })
+    </div>
+    <div class="grid-item">
+        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-input", id = "LastName" } })
+        <div>
+            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "error", id = "LastNameError" })
+        </div>
+    </div>
 
+
+    <!-- Date of Birth -->
+    <div class="grid-item">
+        @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "form-label" })
+
+    </div>
+    <div class="grid-item">
+        @Html.TextBoxFor(model => model.DateOfBirth, "{0:yyyy-MM-dd}", new { @class = "form-input", type = "date", id = "DateOfBirth" })
+        @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "error" })
+    </div>
+
+    <!-- Gender -->
+    <div class="grid-item">
+        @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "form-label" })
+    </div>
+    <div class="grid-item radio ">
+        <div class="radio">
+            @Html.RadioButtonFor(model => model.Gender, "M", new { @id = "Male" }) Male
+        </div>
+        <div class="radio">
+            @Html.RadioButtonFor(model => model.Gender, "F", new { @id = "Female" }) Female
+        </div>
+        <div class="radio">
+            @Html.RadioButtonFor(model => model.Gender, "O", new { @id = "Other" }) Other
+        </div>
+        @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "error", id = "GenderError" })
+    </div>
+
+    <!-- Address -->
+    <div class="grid-item">
+        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "form-label" })
+    </div>
+    <div class="grid-item">
+        @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-input", id = "Address" } })
+        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "error", id = "AddressError" })
+    </div>
+
+
+    <!-- State -->
+    <div class="grid-item">
+        @Html.Label("State", htmlAttributes: new { @class = "form-label" })
+
+    </div>
+    <div class="grid-item">
+        @Html.DropDownList("StateID", (IEnumerable<SelectListItem>)ViewBag.States, "Select State", new { @class = "form-input dropdown", id = "StateDropdown", style = "width: 370px;" })
+        <div>
+            <span class="error" id="StateError"></span>
+        </div>
+    </div>
+
+    <!-- District -->
+    <div class="grid-item">
+        @Html.Label("District", htmlAttributes: new { @class = "form-label" })
+    </div>
+    <div class="grid-item">
+        @Html.DropDownList("DistrictID", new List<SelectListItem>(), "Select District", new { @class = "form-input dropdown", id = "DistrictDropdown", style = "width: 370px;" })
+        <div>
+            <span class="error" id="DistrictError"></span>
+        </div>
+    </div>
+
+  
+    <!-- Email -->
+    <div class="grid-item">
+        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "form-label" })
+    </div>
+    <div class="grid-item">
+        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-input", id = "Email" } })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "error", id = "EmailError" })
+    </div>
+
+
+
+
+    <!-- Phone Number -->
+    <div class="grid-item">
+        @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "form-label" })
+    </div>
+    <div class="grid-item">
+        @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-input", id = "PhoneNumber" } })
+        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "error", id = "PhoneNumberError" })
+    </div>
+
+
+
+    <!-- Profile Picture -->
+    <div class="grid-item">
+        @Html.LabelFor(model => model.ProfilePicture, htmlAttributes: new { @class = "form-label" })
+    </div>
+    <div class="grid-item">
+        <input type="file" name="ProfilePicture" class="form-input" id="ProfilePicture" />
+        <div>
+            @Html.ValidationMessageFor(model => model.ProfilePicture, "", new { @class = "error", id = "ProfilePictureError" })
+
+            @Html.HiddenFor(model => model.ProfilePicture)
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="grid-item button">
+        <input type="submit" id="submitBtn" value="Save" class="save-button" />
+    </div>
 </div>
 
+        }
 
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#StateDropdown').change(function () {
-                var stateId = $(this).val();
-                if (stateId) {
-                    $.ajax({
-                        url: '@Url.Action("GetCities", "Authentication")',
-                        data: { stateId: stateId },
-                        success: function (data) {
-                            var districtDropdown = $('#DistrictDropdown');
-                            districtDropdown.empty();
-                            districtDropdown.append('<option value="">Select District</option>');
-                            $.each(data, function (index, item) {
-                                districtDropdown.append('<option value="' + item.Value + '">' + item.Text + '</option>');
-                            });
-                        }
-                    });
-                } else {
-                    $('#DistrictDropdown').empty().append('<option value="">Select District</option>');
-                }
-            });
-        });
-    </script>
-}
-
+        @section Scripts {
+            <script src="~/Scripts/CustomScript/HomeScript/EditProfile.js"></script>
+        }

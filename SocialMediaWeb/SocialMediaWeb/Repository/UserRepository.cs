@@ -16,8 +16,6 @@ namespace SocialMediaWeb.Repository
         {
             try
             {
-
-
                 connectionString = ConfigurationManager.ConnectionStrings["SocialMediaDBConnectionString"].ConnectionString;
             }
             catch (Exception ex)

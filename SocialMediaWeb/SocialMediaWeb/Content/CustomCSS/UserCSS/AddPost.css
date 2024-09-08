@@ -1,0 +1,45 @@
+﻿.addpost-container {
+    max-width: 600px;
+    margin: 40px auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; 
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+
+.button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+   
+}
+
+.text-area {
+    width: 400px;
+    height: 200px;
+}
+
+.error-message{
+    color:red;
+    font-size:17px;
+}

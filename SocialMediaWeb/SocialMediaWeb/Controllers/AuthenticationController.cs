@@ -48,14 +48,18 @@ namespace SocialMediaWeb.Controllers
             {
                 try
                 {
-                    string profilePicturePath = null;
-                      
-                    if (signup.ProfilePicture != null && signup.ProfilePicture.ContentLength > 0)
+                    string profilePicture = null;
+                   
+
+                    if (Request.Files["ProfilePicture"] != null && Request.Files["ProfilePicture"].ContentLength > 0)
                     {
-                        var fileName = Path.GetFileName(signup.ProfilePicture.FileName);
-                        var path = Path.Combine(Server.MapPath("~/Content/Images/ProfilePicture"), fileName);
-                        signup.ProfilePicture.SaveAs(path);
-                        profilePicturePath = "/Content/Images/ProfilePicture/" + fileName;
+                        var profilePictureFile = Request.Files["ProfilePicture"];
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            profilePictureFile.InputStream.CopyTo(memoryStream);
+                            byte[] imageBytes = memoryStream.ToArray();
+                            profilePicture = Convert.ToBase64String(imageBytes);               
+                        }
                     }
 
                     string hashedPassword = BCrypt.Net.BCrypt.HashPassword(signup.UserPassword);
@@ -72,7 +76,7 @@ namespace SocialMediaWeb.Controllers
                         LastName = signup.LastName,
                         DateOfBirth = signup.DateOfBirth,
                         Gender = signup.Gender,
-                        ProfilePicture = profilePicturePath,
+                        ProfilePicture = profilePicture,
                         PhoneNumber = signup.PhoneNumber,
                         Address = signup.Address,
                         StateID = signup.StateID,

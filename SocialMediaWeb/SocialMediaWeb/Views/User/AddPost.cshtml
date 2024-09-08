@@ -4,21 +4,33 @@
     ViewBag.Title = "AddPost";
     Layout = "~/Views/Shared/UserLayout.cshtml";
 }
+<link href="~/Content/CustomCSS/UserCSS/AddPost.css" rel="stylesheet" />
+<div class="addpost-container">
 
-<h2>AddPost</h2>
-@using (Html.BeginForm("AddPost", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
+    <h2>AddPost</h2>
+    @using (Html.BeginForm("AddPost", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
 
-    <div class="">
-        @Html.LabelFor(model => model.Content)
-        @Html.TextAreaFor(model => model.Content, new { @class = "" })
-    </div>
+        <div class="form-group">
+            @Html.TextAreaFor(model => model.Content, new { @class = "text-area", placeholder = "What is in your mind?", id = "Content" })
 
-    <div class="">
-        @Html.LabelFor(model => model.ImageFile)
-        @Html.TextBoxFor(model => model.ImageFile, new { type = "file", @class = "" })
-    </div>
+        </div>
+        <span class="error-message" id="ContentError"></span>
 
-    <button type="submit" class="">Submit</button>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImageFile)
+            @Html.TextBoxFor(model => model.ImageFile, new { type = "file", @class = "", id = "ImageFile" })
+        </div>
+        <span class="error-message" id="ImageError"></span>
+        <div class="form-group">
+
+            <button type="submit" class="button" id="submitBtn">Submit</button>
+        </div>
+    }
+
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/CustomScript/HomeScript/AddPost.js"></script>
 }

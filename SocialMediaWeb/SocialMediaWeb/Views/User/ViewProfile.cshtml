@@ -5,100 +5,74 @@
     Layout = "~/Views/Shared/UserLayout.cshtml";
 }
 
-<h2>My profile</h2>
+<link href="~/Content/CustomCSS/UserCSS/ViewProfile.css" rel="stylesheet" />
 
-<div>
-    
-    <dl class="dl-horizontal">
+<div class="profile-container">
+    <div class="profile-header">
+        @if (!string.IsNullOrEmpty(Model.ProfilePicture))
+        {
+            <div class="profile-picture">
+                
+                <img src="data:image/jpeg;base64,@Model.ProfilePicture" alt="Profile Picture" />
+            </div>
+        }
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ProfilePicture)
-        </dt>
+    <div class="profile-details">
+        <div class="profile-item">
+            <div class="profile-label">@Html.DisplayNameFor(model => model.Email)</div>
+            <div class="profile-value">@Html.DisplayFor(model => model.Email)</div>
+        </div>
 
-        <dd>
-            @if (!string.IsNullOrEmpty(Model.ProfilePicture))
-            {
-                <img src="@Url.Content(Model.ProfilePicture)" alt="Profile Picture" />
+        <div class="profile-item">
+            <div class="profile-label">@Html.DisplayNameFor(model => model.FirstName)</div>
+            <div class="profile-value">@Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</div>
+        </div>
 
-            }
+        <div class="profile-item">
+            <div class="profile-label">@Html.DisplayNameFor(model => model.DateOfBirth)</div>
+            <div class="profile-value">@Model.DateOfBirth.ToShortDateString()</div>
+        </div>
+
+        <div class="profile-item">
+            <div class="profile-label">@Html.DisplayNameFor(model => model.Gender)</div>
+            <div class="profile-value">
+                @if (Model.Gender == "M")
+                {
+                    <span>Male</span>
+                }
+                else
+                {
+                    <span>Female</span>
+                }
+            </div>
+        </div>
+
+        <div class="profile-item">
+            <div class="profile-label">@Html.DisplayNameFor(model => model.PhoneNumber)</div>
+            <div class="profile-value">@Html.DisplayFor(model => model.PhoneNumber)</div>
+        </div>
+
+        <div class="profile-item">
+            <div class="profile-label">@Html.DisplayNameFor(model => model.Address)</div>
+            <div class="profile-value">@Html.DisplayFor(model => model.Address)</div>
+        </div>
+
+        <div class="profile-item">
+            <div class="profile-label">@Html.DisplayNameFor(model => model.StateName)</div>
+            <div class="profile-value">@Html.DisplayFor(model => model.StateName)</div>
+        </div>
+
+        <div class="profile-item">
+            <div class="profile-label">@Html.DisplayNameFor(model => model.DistrictName)</div>
+            <div class="profile-value">@Html.DisplayFor(model => model.DistrictName)</div>
+        </div>
+        <div class="profile-item">
             
-               
+                @Html.ActionLink("Edit Profile", "EditProfile", new { id = Model.UserID }, new { @class = "btn btn-primary" })
             
-        </dd>
-
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DateOfBirth)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DateOfBirth)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Gender)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Gender)
-        </dd>
-
-
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.StateName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.StateName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DistrictName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DistrictName)
-        </dd>
-
-    </dl>
+        </div>
+    </div>
 </div>
-<p>
 
-    @Html.ActionLink("Edit Profile", "EditProfile", new { id = Model.UserID }) |
 
-</p>
