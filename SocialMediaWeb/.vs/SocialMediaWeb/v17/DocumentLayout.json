@@ -3,52 +3,152 @@
   "WorkspaceRootPath": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\scripts\\customscript\\homescript\\editprofile.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\scripts\\customscript\\homescript\\editprofile.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|d:\\socialmedia_webapplication\\socialmediaweb\\socialmediaweb\\content\\customcss\\changepassword.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\changepassword.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\editprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\editprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\admin\\adminchangepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\admin\\adminchangepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|d:\\socialmedia_webapplication\\socialmediaweb\\socialmediaweb\\content\\customcss\\usercss\\editprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\usercss\\editprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|d:\\socialmedia_webapplication\\socialmediaweb\\socialmediaweb\\scripts\\customscript\\changepassword.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\scripts\\customscript\\changepassword.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\scripts\\customscript\\signup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\scripts\\customscript\\signup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|d:\\socialmedia_webapplication\\socialmediaweb\\socialmediaweb\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\authentication\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\authentication\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\signup.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\signup.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\shared\\adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\shared\\adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\authentication\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\authentication\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|d:\\socialmedia_webapplication\\socialmediaweb\\socialmediaweb\\scripts\\customscript\\signup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\scripts\\customscript\\signup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\scripts\\customscript\\homescript\\addpost.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\scripts\\customscript\\homescript\\addpost.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\usercss\\userdashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\usercss\\userdashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\userdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\userdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\shared\\userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\shared\\userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\viewprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\viewfriendsprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\viewfriendsprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\reportpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\reportpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\findfriends.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\findfriends.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\editprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\editprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\displaycomment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\displaycomment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\addpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\addpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\signup.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\signup.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\usercss\\displaycomment.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\usercss\\displaycomment.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\admincss\\reportedpost.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\admincss\\reportedpost.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\admincss\\adminaddpost.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\admincss\\adminaddpost.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\repository\\authenticationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\repository\\authenticationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\usercss\\editprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\usercss\\editprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -59,26 +159,6 @@
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\authentication\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|d:\\socialmedia_webapplication\\socialmediaweb\\socialmediaweb\\repository\\authenticationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\repository\\authenticationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\userdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\userdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\findfriends.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\findfriends.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\managepost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\managepost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -87,48 +167,12 @@
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\scripts\\customscript\\homescript\\findfriends.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\addpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\addpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\scripts\\customscript\\homescript\\addpost.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\scripts\\customscript\\homescript\\addpost.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\usercss\\viewprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\usercss\\viewprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\user\\reportpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\user\\reportpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\usercss\\reportpost.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\usercss\\reportpost.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\usercss\\userdashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\usercss\\userdashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\scripts\\customscript\\homescript\\homecarousel.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -143,48 +187,20 @@
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\repository\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\models\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\models\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\admin\\adminaddpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\admin\\adminaddpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\content\\customcss\\admincss\\admindashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\content\\customcss\\admincss\\admindashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\admin\\reportedpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\admin\\reportedpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\scripts\\customscript\\autohidealert.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|solutionrelative:socialmediaweb\\scripts\\customscript\\autohidealert.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D570421-788A-4646-809A-8E46D112089B}|SocialMediaWeb\\SocialMediaWeb.csproj|D:\\SocialMedia_WebApplication\\SocialMediaWeb\\socialmediaweb\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -202,377 +218,200 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditProfile.css",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\EditProfile.css",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\EditProfile.css",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\EditProfile.css",
-              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\EditProfile.css",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADMAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-08T17:12:57.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Signup.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Authentication\\Signup.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Authentication\\Signup.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Authentication\\Signup.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\Authentication\\Signup.cshtml",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAAAHcAAAB7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-07T03:11:31.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EditProfile.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\EditProfile.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\EditProfile.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\EditProfile.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\EditProfile.cshtml",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAnwFwAAAAAAAAA",
+              "Title": "AdminChangePassword.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Admin\\AdminChangePassword.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Admin\\AdminChangePassword.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Admin\\AdminChangePassword.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\Admin\\AdminChangePassword.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T12:59:30.038Z",
+              "WhenOpened": "2024-09-09T16:36:40.061Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Repository\\UserRepository.cs",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "SocialMediaWeb\\Repository\\UserRepository.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAWwIoAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T13:15:39.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Signup.css",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\Signup.css",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\Signup.css",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\Signup.css",
-              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\Signup.css",
-              "ViewState": "AQIAACwAAAAAAAAAAAAYwEAAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-07T16:29:18.616Z",
+              "Title": "AdminLayout.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Shared\\AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Shared\\AdminLayout.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Shared\\AdminLayout.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\Shared\\AdminLayout.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC4AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T15:59:50.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Signup.js",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\Signup.js",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Scripts\\CustomScript\\Signup.js",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\Signup.js",
-              "RelativeToolTip": "SocialMediaWeb\\Scripts\\CustomScript\\Signup.js",
-              "ViewState": "AQIAAKEAAAAAAAAAAAAAANUAAAAFAAAA",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "SocialMediaWeb\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAqwIsAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T16:11:57.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChangePassword.js",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\ChangePassword.js",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Scripts\\CustomScript\\ChangePassword.js",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\ChangePassword.js",
+              "RelativeToolTip": "SocialMediaWeb\\Scripts\\CustomScript\\ChangePassword.js",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowEMAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-06T16:48:26.633Z",
+              "WhenOpened": "2024-09-09T17:27:20.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EditProfile.js",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\EditProfile.js",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\EditProfile.js",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\EditProfile.js",
-              "RelativeToolTip": "SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\EditProfile.js",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAiwF0AAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-08T13:02:12.521Z",
+              "Title": "ChangePassword.css",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\ChangePassword.css",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\ChangePassword.css",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\ChangePassword.css",
+              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\ChangePassword.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-09T17:27:55.908Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ViewFriendsProfile.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ViewFriendsProfile.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\ViewFriendsProfile.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ViewFriendsProfile.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\ViewFriendsProfile.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T14:27:52.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ViewProfile.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ViewProfile.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\ViewProfile.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ViewProfile.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\ViewProfile.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAABIAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-03T14:44:51.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SignupViewModel.cs",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\SignupViewModel.cs",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Models\\SignupViewModel.cs",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\SignupViewModel.cs",
-              "RelativeToolTip": "SocialMediaWeb\\Models\\SignupViewModel.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAkwCIAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T17:46:09.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Controllers\\UserController.cs",
               "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\UserController.cs",
               "RelativeToolTip": "SocialMediaWeb\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAHkAAAAAAAAAAAAkwIsAAAAUAAAA",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAUwMsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-05T17:06:57.501Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Login.css",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\Login.css",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\Login.css",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\Login.css",
-              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\Login.css",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFUAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-07T16:22:25.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Authentication\\Login.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Authentication\\Login.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Authentication\\Login.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\Authentication\\Login.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACcAAABFAAAA",
+              "DocumentIndex": 6,
+              "Title": "Signup.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Authentication\\Signup.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Authentication\\Signup.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Authentication\\Signup.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\Authentication\\Signup.cshtml",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAAAJwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T03:08:43.869Z",
+              "WhenOpened": "2024-09-07T03:11:31.465Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Controllers\\AuthenticationController.cs",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\AuthenticationController.cs",
-              "RelativeToolTip": "SocialMediaWeb\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAQwDoAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T13:57:40.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "SocialMediaWeb\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAgwFsAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T02:58:24.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AuthenticationRepository.cs",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Repository\\AuthenticationRepository.cs",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Repository\\AuthenticationRepository.cs",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Repository\\AuthenticationRepository.cs",
-              "RelativeToolTip": "SocialMediaWeb\\Repository\\AuthenticationRepository.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAmwFcAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T03:36:43.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AdminDashboard.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Admin\\AdminDashboard.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Admin\\AdminDashboard.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Admin\\AdminDashboard.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\Admin\\AdminDashboard.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-02T09:15:41.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserDashboard.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\UserDashboard.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\UserDashboard.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\UserDashboard.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\UserDashboard.cshtml",
-              "ViewState": "AQIAABMAAAAAAAAAAAAYwCEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-06T09:15:57.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "FindFriends.js",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\FindFriends.js",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\FindFriends.js",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\FindFriends.js",
-              "RelativeToolTip": "SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\FindFriends.js",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAcwBIAAAAyAAAA",
+              "DocumentIndex": 7,
+              "Title": "Signup.js",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\Signup.js",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Scripts\\CustomScript\\Signup.js",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\Signup.js",
+              "RelativeToolTip": "SocialMediaWeb\\Scripts\\CustomScript\\Signup.js",
+              "ViewState": "AQIAAAABAAAAAAAAAAAmwAsBAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-08T03:39:08.926Z"
+              "WhenOpened": "2024-09-09T17:22:50.585Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FindFriends.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\FindFriends.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\FindFriends.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\FindFriends.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\FindFriends.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T14:17:08.523Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ChangePassword.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\ChangePassword.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ChangePassword.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\ChangePassword.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-04T10:24:11.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AddPost.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\AddPost.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\AddPost.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\AddPost.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\AddPost.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-04T14:43:35.458Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ManagePost.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ManagePost.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\ManagePost.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ManagePost.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\ManagePost.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T14:06:50.011Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Post.cs",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Post.cs",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Models\\Post.cs",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Post.cs",
-              "RelativeToolTip": "SocialMediaWeb\\Models\\Post.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA5wEMAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T03:41:23.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ReportPost.css",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ReportPost.css",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ReportPost.css",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ReportPost.css",
-              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ReportPost.css",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-08T05:08:51.841Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Users.cs",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Users.cs",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Models\\Users.cs",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Users.cs",
-              "RelativeToolTip": "SocialMediaWeb\\Models\\Users.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T09:53:19.503Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 8,
               "Title": "AddPost.js",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\AddPost.js",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\AddPost.js",
               "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\AddPost.js",
               "RelativeToolTip": "SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\AddPost.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBYAAAANAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAqwBYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-08T03:50:14.9Z"
+              "WhenOpened": "2024-09-08T03:50:14.9Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ViewProfile.css",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ViewProfile.css",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ViewProfile.css",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ViewProfile.css",
-              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ViewProfile.css",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAC4AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-08T05:31:06.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAzAAAA",
+              "DocumentIndex": 9,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\ChangePassword.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ChangePassword.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\ChangePassword.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-02T02:18:37.866Z"
+              "WhenOpened": "2024-09-04T10:24:11.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 11,
+              "Title": "AdminDashboard.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Admin\\AdminDashboard.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Admin\\AdminDashboard.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Admin\\AdminDashboard.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\Admin\\AdminDashboard.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-02T09:15:41.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "SocialMediaWeb\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAkwM8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T13:57:40.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Repository\\UserRepository.cs",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "SocialMediaWeb\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAAEMCAAAAAAAAAAAiwEECAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T13:15:39.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserDashboard.css",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\UserDashboard.css",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\UserDashboard.css",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\UserDashboard.css",
+              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\UserDashboard.css",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAEUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-06T09:42:43.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserDashboard.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\UserDashboard.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\UserDashboard.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\UserDashboard.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\UserDashboard.cshtml",
+              "ViewState": "AQIAADcAAAAAAAAAAAAAAEwAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-06T09:15:57.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "ReportPost.cshtml",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ReportPost.cshtml",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\ReportPost.cshtml",
@@ -584,31 +423,331 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserLayout.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Shared\\UserLayout.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Shared\\UserLayout.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Shared\\UserLayout.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\Shared\\UserLayout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T15:59:56.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FindFriends.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\FindFriends.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\FindFriends.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\FindFriends.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\FindFriends.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T14:17:08.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EditProfile.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\EditProfile.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\EditProfile.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\EditProfile.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\EditProfile.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T12:59:30.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ViewFriendsProfile.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ViewFriendsProfile.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\ViewFriendsProfile.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ViewFriendsProfile.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\ViewFriendsProfile.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T14:27:52.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ViewProfile.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ViewProfile.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\ViewProfile.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ViewProfile.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\ViewProfile.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-03T14:44:51.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DisplayComment.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\DisplayComment.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\DisplayComment.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\DisplayComment.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\DisplayComment.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAEkAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T14:05:59.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AddPost.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\AddPost.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\AddPost.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\AddPost.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\AddPost.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-04T14:43:35.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Signup.css",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\Signup.css",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\Signup.css",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\Signup.css",
+              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\Signup.css",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAYwEAAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-07T16:29:18.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DisplayComment.css",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\DisplayComment.css",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\DisplayComment.css",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\DisplayComment.css",
+              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\DisplayComment.css",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-09T13:49:01.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Models\\Comment.cs",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Comment.cs",
+              "RelativeToolTip": "SocialMediaWeb\\Models\\Comment.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAqwC0AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T07:45:52.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Users.cs",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Models\\Users.cs",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Users.cs",
+              "RelativeToolTip": "SocialMediaWeb\\Models\\Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T09:53:19.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Authentication.cs",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Authentication.cs",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Models\\Authentication.cs",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Authentication.cs",
+              "RelativeToolTip": "SocialMediaWeb\\Models\\Authentication.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAACEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T10:42:54.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SignupViewModel.cs",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\SignupViewModel.cs",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Models\\SignupViewModel.cs",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\SignupViewModel.cs",
+              "RelativeToolTip": "SocialMediaWeb\\Models\\SignupViewModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T17:46:09.185Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 28,
+              "Title": "Post.cs",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Post.cs",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Models\\Post.cs",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Post.cs",
+              "RelativeToolTip": "SocialMediaWeb\\Models\\Post.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAIwEMAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T03:41:23.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "Profile.cs",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Profile.cs",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Models\\Profile.cs",
               "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Profile.cs",
               "RelativeToolTip": "SocialMediaWeb\\Models\\Profile.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAUwAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-08T05:28:42.018Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UserDashboard.css",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\UserDashboard.css",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\UserDashboard.css",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\UserDashboard.css",
-              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\UserDashboard.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAARAAAA",
+              "DocumentIndex": 32,
+              "Title": "AdminAddPost.css",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\AdminCSS\\AdminAddPost.css",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\AdminCSS\\AdminAddPost.css",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\AdminCSS\\AdminAddPost.css",
+              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\AdminCSS\\AdminAddPost.css",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-06T09:42:43.727Z"
+              "WhenOpened": "2024-09-09T04:54:14.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
+              "Title": "ReportedPost.css",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\AdminCSS\\ReportedPost.css",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\AdminCSS\\ReportedPost.css",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\AdminCSS\\ReportedPost.css",
+              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\AdminCSS\\ReportedPost.css",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-09T05:12:56.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AuthenticationRepository.cs",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Repository\\AuthenticationRepository.cs",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Repository\\AuthenticationRepository.cs",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Repository\\AuthenticationRepository.cs",
+              "RelativeToolTip": "SocialMediaWeb\\Repository\\AuthenticationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T03:36:43.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "packages.config",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\packages.config",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\packages.config",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\packages.config",
+              "RelativeToolTip": "SocialMediaWeb\\packages.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-09T04:40:55.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SocialMediaWeb\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T02:18:15.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EditProfile.css",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\EditProfile.css",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\EditProfile.css",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\EditProfile.css",
+              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\EditProfile.css",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-08T17:12:57.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Login.css",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\Login.css",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\Login.css",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\Login.css",
+              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\Login.css",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFUAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-07T16:22:25.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Authentication\\Login.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Authentication\\Login.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Authentication\\Login.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\Authentication\\Login.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACcAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T03:08:43.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "FindFriends.js",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\FindFriends.js",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\FindFriends.js",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\FindFriends.js",
+              "RelativeToolTip": "SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\FindFriends.js",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAcwBIAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-09-08T03:39:08.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ManagePost.cshtml",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ManagePost.cshtml",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\User\\ManagePost.cshtml",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\User\\ManagePost.cshtml",
+              "RelativeToolTip": "SocialMediaWeb\\Views\\User\\ManagePost.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T14:06:50.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ReportPost.css",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ReportPost.css",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ReportPost.css",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ReportPost.css",
+              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ReportPost.css",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-08T05:08:51.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ViewProfile.css",
+              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ViewProfile.css",
+              "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ViewProfile.css",
+              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ViewProfile.css",
+              "RelativeToolTip": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ViewProfile.css",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAC4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-08T05:31:06.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
               "Title": "HomeCarousel.js",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\HomeCarousel.js",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Scripts\\CustomScript\\HomeScript\\HomeCarousel.js",
@@ -620,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 44,
               "Title": "ManagePost.css",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ManagePost.css",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\UserCSS\\ManagePost.css",
@@ -632,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 45,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\_ViewStart.cshtml",
@@ -644,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 46,
               "Title": "Web.config",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Web.config",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Web.config",
@@ -656,44 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Web.config",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Web.config",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Web.config",
-              "RelativeToolTip": "SocialMediaWeb\\Web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-09-04T16:57:28.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "AdminRepository.cs",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Repository\\AdminRepository.cs",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Repository\\AdminRepository.cs",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Repository\\AdminRepository.cs",
-              "RelativeToolTip": "SocialMediaWeb\\Repository\\AdminRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T17:02:42.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Authentication.cs",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Authentication.cs",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Models\\Authentication.cs",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Models\\Authentication.cs",
-              "RelativeToolTip": "SocialMediaWeb\\Models\\Authentication.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACEAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T10:42:54.153Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 47,
               "Title": "Error.cshtml",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Shared\\Error.cshtml",
@@ -705,19 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "AdminAddPost.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Admin\\AdminAddPost.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Admin\\AdminAddPost.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Admin\\AdminAddPost.cshtml*",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\Admin\\AdminAddPost.cshtml*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-06T10:56:55.895Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 48,
               "Title": "AdminDashboard.css",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\AdminCSS\\AdminDashboard.css",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\AdminCSS\\AdminDashboard.css",
@@ -729,31 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "ReportedPost.cshtml",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Admin\\ReportedPost.cshtml",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Admin\\ReportedPost.cshtml",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Admin\\ReportedPost.cshtml",
-              "RelativeToolTip": "SocialMediaWeb\\Views\\Admin\\ReportedPost.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-05T17:08:41.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "SocialMediaWeb\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAwAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T02:18:15.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Home\\Index.cshtml",
@@ -765,19 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "AutoHideAlert.js",
-              "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\AutoHideAlert.js",
-              "RelativeDocumentMoniker": "SocialMediaWeb\\Scripts\\CustomScript\\AutoHideAlert.js",
-              "ToolTip": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Scripts\\CustomScript\\AutoHideAlert.js",
-              "RelativeToolTip": "SocialMediaWeb\\Scripts\\CustomScript\\AutoHideAlert.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-04T11:15:03.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "Contactus.css",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Content\\CustomCSS\\HomeCSS\\Contactus.css",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Content\\CustomCSS\\HomeCSS\\Contactus.css",
@@ -789,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "Contact.cshtml",
               "DocumentMoniker": "D:\\SocialMedia_WebApplication\\SocialMediaWeb\\SocialMediaWeb\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "SocialMediaWeb\\Views\\Home\\Contact.cshtml",

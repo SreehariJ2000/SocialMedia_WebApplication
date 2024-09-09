@@ -14,6 +14,8 @@ namespace SocialMediaWeb.Controllers
     {
         private AdminRepository adminRepository = new AdminRepository();
         private UserRepository userRepository = new UserRepository();
+        AuthenticationRepository authenticationRepository = new AuthenticationRepository();
+
 
         public ActionResult AdminDashboard()
         {
@@ -63,13 +65,21 @@ namespace SocialMediaWeb.Controllers
             }
         }
 
-
+        /// <summary>
+        /// load add post page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult AdminAddPost()
         {
             return View();
         }
 
 
+        /// <summary>
+        /// Admin can add post
+        /// </summary>
+        /// <param name="postViewModel"> data (image, content ,id)</param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AdminAddPost(PostViewModel postViewModel)
@@ -116,6 +126,47 @@ namespace SocialMediaWeb.Controllers
             }
 
             return View("AdminAddPost", postViewModel);
+        }
+
+
+        public ActionResult AdminChangePassword()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AdminChangePassword(ChangePassword changePassword)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    string userEmail = Session["UserEmail"].ToString();
+                    var user = authenticationRepository.AuthenticateUser(userEmail, changePassword.OldPassword);
+                    if (user != null)
+                    {
+                        string hashedNewPassword = BCrypt.Net.BCrypt.HashPassword(changePassword.NewPassword);
+                        userRepository.UpdatePassword(userEmail, hashedNewPassword);
+
+                        return RedirectToAction("Login", "Authentication");
+                    }
+                    else
+                    {
+
+                        TempData["ErrorMessage"] = "Old password is incorrect";
+                    }
+                }
+                catch (Exception exception)
+                {
+
+                    Console.WriteLine(exception.Message);
+                    ModelState.AddModelError("", "An error occurred while changing the password.");
+                }
+            }
+
+            return View(changePassword);
         }
 
     }

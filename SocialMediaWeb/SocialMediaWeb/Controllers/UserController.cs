@@ -23,15 +23,14 @@ namespace SocialMediaWeb.Controllers
                 var posts = userRepository.GetAllPost();
                 return View(posts);
             }
-            catch (SqlException sqlEx)
+            catch (SqlException sqlException)
             {
-                System.Diagnostics.Debug.WriteLine($"SQL Error {sqlEx.Number}: {sqlEx.Message}");
+               
                 return Content("Database error occurred.");
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                System.Diagnostics.Debug.WriteLine(ex.ToString());
-                return Content("An error occurred.");
+                return RedirectToAction("Login", "Authentication");
             }
 
 
@@ -56,10 +55,10 @@ namespace SocialMediaWeb.Controllers
 
                 return View(model);
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
 
-                return Content("An error occurred while fetching the user profile.");
+                return RedirectToAction("UserDashboard", "User");
             }
         }
 
@@ -99,9 +98,9 @@ namespace SocialMediaWeb.Controllers
 
                 return View(viewModel);
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(exception.Message);
                 return Content("Error loading profile.");
             }
         }
@@ -140,11 +139,12 @@ namespace SocialMediaWeb.Controllers
                     userRepository.UpdateUserProfile(signup, profilePicture, userId);
                     return RedirectToAction("ViewProfile", "User"); 
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
                     
-                    Console.WriteLine(ex.Message);
-                    return Content("Error updating profile.");
+                    Console.WriteLine(exception.Message);
+                    int userId = Convert.ToInt32(Session["UserID"]);
+                    return RedirectToAction("EditProfile", new { id = userId });
                 }
             }
             return View(signup);
@@ -348,7 +348,7 @@ namespace SocialMediaWeb.Controllers
                 if (ModelState.IsValid)
                 {
                     userRepository.SaveReport(reportPost.PostId, reportPost.Reason, reportPost.ReportedBy);
-                    TempData["PostReported"] = "You reported the post";
+                    TempData["Message"] = "You reported the post";
                     return RedirectToAction("UserDashboard");
                 }
 
@@ -380,16 +380,26 @@ namespace SocialMediaWeb.Controllers
         /// <returns></returns>
         public ActionResult SearchFriends(string searchTerm)
         {
-            var profiles = userRepository.SearchProfiles(searchTerm);
-            
-            var result = profiles.Select(p => new
+
+            try
             {
-                p.UserID,
-                p.FirstName,
-                p.LastName,
-                ProfilePicture = string.IsNullOrEmpty(p.ProfilePicture) ? null : "data:image/jpeg;base64," + p.ProfilePicture
-            });
-            return Json(result, JsonRequestBehavior.AllowGet);
+                var profiles = userRepository.SearchProfiles(searchTerm);
+
+                var result = profiles.Select(p => new
+                {
+                    p.UserID,
+                    p.FirstName,
+                    p.LastName,
+                    ProfilePicture = string.IsNullOrEmpty(p.ProfilePicture) ? null : "data:image/jpeg;base64," + p.ProfilePicture
+                });
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception exception) { 
+                   Console.WriteLine(exception.Message);
+                return RedirectToAction("FindFriends");
+
+            }
+            
         }
 
 
@@ -428,6 +438,11 @@ namespace SocialMediaWeb.Controllers
         }
 
 
+        /// <summary>
+        /// follow a Person
+        /// </summary>
+        /// <param name="userId"> the id to person </param>
+        /// <returns></returns>
 
         [HttpPost]
         public ActionResult Follow(int userId)
@@ -439,12 +454,17 @@ namespace SocialMediaWeb.Controllers
 
                 return RedirectToAction("ViewFriendsProfile", new { userId });
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                // Handle exception
-                return View("Error");
+                return RedirectToAction("ViewFriendsProfile", new { userId });
             }
         }
+
+        /// <summary>
+        ///            To unfollow user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
 
         [HttpPost]
         public ActionResult Unfollow(int userId)
@@ -456,12 +476,78 @@ namespace SocialMediaWeb.Controllers
 
                 return RedirectToAction("ViewFriendsProfile", new { userId });
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                // Handle exception
-                return View("Error");
+                return RedirectToAction("ViewFriendsProfile", new { userId });
             }
         }
+
+
+        /// <summary>
+        /// Add comment to a particular post
+        /// </summary>
+        /// <param name="postId"></param>
+        /// <param name="commentText"></param>
+        /// <returns></returns>
+
+        [HttpPost]
+        public ActionResult AddComment(int postId, string commentText)
+        {
+            try
+            {
+                int userId = Convert.ToInt32(Session["UserID"]);
+                userRepository.AddComment(postId, userId, commentText);
+                return RedirectToAction("UserDashboard");
+            }
+            catch (Exception exception)
+            {     
+                Console.WriteLine($"An error occurred while adding the comment: {exception.Message}");            
+                return RedirectToAction("UserDashboard");
+            }
+        }
+
+
+        /// <summary>
+        /// Display all the comments of particular post
+        /// </summary>
+        /// <param name="postId"></param>
+        /// <returns></returns>
+        public ActionResult DisplayComment(int postId)
+        {
+            var postDetails = userRepository.PostByPostId(postId);
+            var postComments = userRepository.CommentsByPostId(postId);
+            var viewModel = new ViewComments
+            {
+                PostDetails = postDetails,
+                Comments = postComments
+            };
+            ViewBag.LoggedInUserId = Convert.ToInt32(Session["UserID"]);
+
+            return View(viewModel);
+
+        }
+
+
+        /// <summary>
+        /// Delete the comment added by the login user
+        /// </summary>
+        /// <param name="commentId"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult DeleteComment(int commentId)
+        {
+            try
+            {
+                userRepository.DeleteComment(commentId);
+                TempData["Message"] = "Comment deleted successfully!";
+            }
+            catch (Exception exception)
+            {
+                TempData["Message"] = "Error deleting comment. Please try again.";
+            }
+            return RedirectToAction("UserDashboard", "User");
+        }
+
 
 
     }

@@ -16,6 +16,10 @@ namespace SocialMediaWeb.Repository
     {
         private readonly string connectionString = ConfigurationManager.ConnectionStrings["SocialMediaDBConnectionString"].ConnectionString;
 
+        /// <summary>
+        /// To see the reported post that report by users
+        /// </summary>
+        /// <returns></returns>
         public List<ReportedPostViewModel> GetReportedPosts()
         {
             var reportedPosts = new List<ReportedPostViewModel>();
@@ -46,6 +50,10 @@ namespace SocialMediaWeb.Repository
         }
 
 
+        /// <summary>
+        /// admin can remove the reported post
+        /// </summary>
+        /// <param name="postId"></param>
         public void DeleteReportedPost(int postId)
         {
             using (var connection = new SqlConnection(connectionString))

@@ -1,12 +1,9 @@
-﻿
-
-@model List<SocialMediaWeb.Models.ReportedPostViewModel>
+﻿@model List<SocialMediaWeb.Models.ReportedPostViewModel>
 @{
     ViewBag.Title = "Reported Posts";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
-
-
+<link href="~/Content/CustomCSS/AdminCSS/ReportedPost.css" rel="stylesheet" />
 @if (TempData["PostDelete"] != null)
 {
     <div class="alert alert-info">
@@ -16,34 +13,32 @@
 
 <h2>Reported Posts</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Report ID</th>
-            <th>Post ID</th>
-            <th>Content</th>
-            <th>Image</th>
-            <th>Reason</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.ReportId</td>
-                <td>@item.PostId</td>
-                <td>@item.Content</td>
-                <td>
-                    @if (!string.IsNullOrEmpty(item.ImageUrl))
-                    {
-                        <img src="data:image;base64,@item.ImageUrl" alt="Post Image" class="post-picture" height="100px" width="100px" />
-                    }
-                </td>
-                <td>@item.Reason</td>
-                <td>
-                    @Html.ActionLink("Delete", "DeleteReportedPost", "Admin", new { id = item.PostId }, new { @class = "btn btn-danger" })
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="reported-posts-header">
+    <div class="post-header-item">Content</div>
+    <div class="post-header-item">Image</div>
+    <div class="post-header-item">Reason for report</div>
+    <div class="post-header-item">Actions</div>
+</div>
+
+<div class="reported-posts-container">
+    @foreach (var item in Model)
+    {
+        <div class="reported-post-row">
+            <div class="post-content">
+                @item.Content
+            </div>
+            <div class="post-image">
+                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                {
+                    <img src="data:image;base64,@item.ImageUrl" alt="Post Image" class="post-picture" />
+                }
+            </div>
+            <div class="post-reason">
+                @item.Reason
+            </div>
+            <div class="post-actions">
+                @Html.ActionLink("Delete", "DeleteReportedPost", "Admin", new { id = item.PostId }, new { @class = "button" })
+            </div>
+        </div>
+    }
+</div>

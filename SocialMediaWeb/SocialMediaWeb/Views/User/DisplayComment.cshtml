@@ -1,0 +1,91 @@
+﻿
+
+
+@model SocialMediaWeb.Models.ViewComments
+@{
+
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Post Details with Comments";
+
+    var loggedInUserId = ViewBag.LoggedInUserId;
+
+}
+<link href="~/Content/CustomCSS/UserCSS/DisplayComment.css" rel="stylesheet" />
+<div class="post-section">
+    <div class="post-details">
+        <div class="post-header">
+            <div class="profile-picture">
+                @if (!string.IsNullOrEmpty(Model.PostDetails.ProfilePicture))
+                {
+                    <img src="data:image/jpeg;base64,@Model.PostDetails.ProfilePicture" alt="Profile Picture" class="picture" />
+                }
+            </div>
+            <div class="post-author">
+                <h4>@Model.PostDetails.Firstname @Model.PostDetails.Lastname</h4>
+            </div>
+        </div>
+
+        <div class="post-content">
+            <p>@Model.PostDetails.PostContent</p>
+        </div>
+
+        <div class="post-image">
+            @if (!string.IsNullOrEmpty(Model.PostDetails.PostImageUrl))
+            {
+                <img src="data:image;base64,@Model.PostDetails.PostImageUrl" alt="Post Image" class="post-picture" />
+            }
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="comment-section">
+        <h4>Comments</h4>
+
+        @if (Model.Comments != null && Model.Comments.Count > 0)
+        {
+            foreach (var comment in Model.Comments)
+            {
+                <div class="comment">
+                    <div class="comment-header">
+                        <div class="comment-profile-picture">
+                            @if (!string.IsNullOrEmpty(comment.ProfilePicture))
+                            {
+                                <img src="data:image/jpeg;base64,@comment.ProfilePicture" alt="Commenter Profile Picture" class="picture" />
+                            }
+                        </div>
+                        <div class="comment-author">
+                            <strong>@comment.FirstName @comment.LastName</strong>
+                            <small>@comment.CommentedAt.ToString("MMM dd, yyyy hh:mm tt")</small>
+                        </div>
+                    </div>
+
+                    <div class="comment-text">
+                        <p>@comment.CommentText</p>
+                    </div>
+
+
+                    @if (comment.UserId == loggedInUserId)
+                    {
+                        <div class="comment-actions">
+                            <form action="@Url.Action("DeleteComment", "User")" method="post" >
+                                <input type="hidden" name="commentId" value="@comment.CommentId" />
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    }
+
+                </div>
+            }
+        }
+        else
+        {
+            <p>No comments available for this post.</p>
+        }
+    </div>
+</div>
+
+

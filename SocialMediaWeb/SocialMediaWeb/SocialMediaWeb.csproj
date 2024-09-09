@@ -144,6 +144,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Authentication.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\SignupViewModel.cs" />
@@ -170,14 +171,18 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\CustomCSS\AdminCSS\AdminAddPost.css" />
     <Content Include="Content\CustomCSS\AdminCSS\AdminDashboard.css" />
     <Content Include="Content\CustomCSS\AdminCSS\AdminLayout.css" />
+    <Content Include="Content\CustomCSS\AdminCSS\ReportedPost.css" />
+    <Content Include="Content\CustomCSS\ChangePassword.css" />
     <Content Include="Content\CustomCSS\HomeCSS\Aboutus.css" />
     <Content Include="Content\CustomCSS\HomeCSS\Contactus.css" />
     <Content Include="Content\CustomCSS\HomeCSS\Home.css" />
     <Content Include="Content\CustomCSS\Login.css" />
     <Content Include="Content\CustomCSS\Signup.css" />
     <Content Include="Content\CustomCSS\UserCSS\AddPost.css" />
+    <Content Include="Content\CustomCSS\UserCSS\DisplayComment.css" />
     <Content Include="Content\CustomCSS\UserCSS\EditProfile.css" />
     <Content Include="Content\CustomCSS\UserCSS\ManagePost.css" />
     <Content Include="Content\CustomCSS\UserCSS\ReportPost.css" />
@@ -200,6 +205,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\CustomScript\AutoHideAlert.js" />
+    <Content Include="Scripts\CustomScript\ChangePassword.js" />
     <Content Include="Scripts\CustomScript\HomeScript\AddPost.js" />
     <Content Include="Scripts\CustomScript\HomeScript\EditProfile.js" />
     <Content Include="Scripts\CustomScript\HomeScript\FindFriends.js" />
@@ -245,6 +251,8 @@
     <Content Include="Views\User\FindFriends.cshtml" />
     <Content Include="Views\User\ViewFriendsProfile.cshtml" />
     <Content Include="Views\Admin\AdminAddPost.cshtml" />
+    <Content Include="Views\User\DisplayComment.cshtml" />
+    <Content Include="Views\Admin\AdminChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

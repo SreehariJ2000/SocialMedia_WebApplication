@@ -37,3 +37,35 @@
     height:250px;
 }
 
+.name {
+    padding-left: 20px;
+}
+
+.post-actions {
+    display: flex; 
+    gap:50px; 
+    align-items: center; 
+    margin-top:10px;
+}
+
+.action-item {
+    display: flex; 
+    align-items: center; 
+}
+
+    .action-item i {
+        font-size: 24px; 
+        color: black; 
+        margin-left: 8px; 
+    }
+
+.report{
+    text-decoration:none;
+    font-size:18px;
+    color:black;
+}
+
+.comment-input{
+    width:65%;
+    height:37px;
+}

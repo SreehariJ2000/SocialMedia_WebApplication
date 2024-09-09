@@ -32,6 +32,8 @@
 
         <li>@Html.ActionLink("Reported post", "ReportedPost", "Admin")</li>
 
+        <li>@Html.ActionLink("Change Password", "AdminChangePassword", "Admin")</li>
+
         <li>@Html.ActionLink("Logout", "Logout", "Authentication")</li>
 
     </ul>
@@ -43,6 +45,7 @@
 
     <script src="~/bundles/jquery"></script>
     <script src="~/bundles/bootstrap"></script>
+    @RenderSection("Scripts", required: false)
 
 </body>
 </html>

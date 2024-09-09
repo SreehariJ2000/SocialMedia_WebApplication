@@ -232,7 +232,7 @@ namespace SocialMediaWeb.Repository
 
 
         /// <summary>
-        /// get the post added by logged in user
+        /// get the posts added by logged in user
         /// </summary>
         /// <param name="userId">login user id</param>
         /// <returns></returns>
@@ -270,7 +270,7 @@ namespace SocialMediaWeb.Repository
         }
 
         /// <summary>
-        /// For deleting the post added by 
+        /// For deleting the post added 
         /// </summary>
         /// <param name="postId"></param>
         public void DeletePost(int postId)
@@ -339,6 +339,11 @@ namespace SocialMediaWeb.Repository
         }
 
 
+        /// <summary>
+        /// search for a particular user profile
+        /// </summary>
+        /// <param name="searchTerm"></param>
+        /// <returns></returns>
         public List<ProfileSearchResultViewModel> SearchProfiles(string searchTerm)
         {
             var profiles = new List<ProfileSearchResultViewModel>();
@@ -367,6 +372,12 @@ namespace SocialMediaWeb.Repository
 
 
 
+        /// <summary>
+        /// to check the logged in user follow the other user
+        /// </summary>
+        /// <param name="loggedInUserId"></param>
+        /// <param name="profileUserId"></param>
+        /// <returns></returns>
         public bool IsUserFollowing(int loggedInUserId, int profileUserId)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -384,7 +395,11 @@ namespace SocialMediaWeb.Repository
             }
         }
 
-
+        /// <summary>
+        /// get the count of followers of other users
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         public int GetFollowersCount(int userId)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -400,6 +415,11 @@ namespace SocialMediaWeb.Repository
             }
         }
 
+        /// <summary>
+        /// get the count of following of other users
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         public int GetFollowingCount(int userId)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -416,6 +436,11 @@ namespace SocialMediaWeb.Repository
         }
 
 
+        /// <summary>
+        /// to follow a particular user
+        /// </summary>
+        /// <param name="followerId"></param>
+        /// <param name="followedId"></param>
         public void FollowUser(int followerId, int followedId)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -432,6 +457,11 @@ namespace SocialMediaWeb.Repository
             }
         }
 
+        /// <summary>
+        /// to unfollow a user
+        /// </summary>
+        /// <param name="followerId"></param>
+        /// <param name="followedId"></param>
         public void UnfollowUser(int followerId, int followedId)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -445,6 +475,121 @@ namespace SocialMediaWeb.Repository
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
+            }
+        }
+
+
+        /// <summary>
+        /// For adding comment to a particular post
+        /// </summary>
+        /// <param name="postId"></param>
+        /// <param name="userId"></param>
+        /// <param name="commentText"></param>
+        public void AddComment(int postId, int userId, string commentText)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (var command = new SqlCommand("SPI_Comment", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@PostId", postId);
+                    command.Parameters.AddWithValue("@UserId", userId);
+                    command.Parameters.AddWithValue("@CommentText", commentText);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
+        /// <summary>
+        /// Get the profile and post details of user with particular postId
+        /// </summary>
+        /// <param name="postId"></param>
+        /// <returns></returns>
+        public CommentProfile PostByPostId(int postId) {
+            CommentProfile commentProfile = null;
+            using(var connection = new SqlConnection(connectionString)) 
+            {
+                var command = new SqlCommand("SPS_PostByPostId", connection);
+                command.CommandType= CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PostId", postId);
+                connection.Open();
+                using (var reader = command.ExecuteReader()) {
+                    if (reader.Read()) {
+                        commentProfile = new CommentProfile
+                        {
+                            PostId = (int)reader["postId"],
+                            PostContent = reader["PostContent"].ToString(),
+                            PostImageUrl = reader["PostImageUrl"].ToString(),
+                            Firstname = reader["firstName"].ToString(),
+                            Lastname = reader["lastName"].ToString(),
+                            ProfilePicture = reader["profilePicture"].ToString()
+                        };       
+                    }              
+                }         
+            }
+            return commentProfile;
+
+        }
+
+
+        /// <summary>
+        /// Get all the comments and details of who posted comment of a particular post
+        /// </summary>
+        /// <param name="postId"></param>
+        /// <returns></returns>
+        public List<CommentData> CommentsByPostId(int postId) 
+        {
+            List<CommentData> commentData = new List<CommentData>();
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPS_CommentsByPostId",connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@PostId",postId);
+                    connection.Open();
+
+                    using(var reader  = command.ExecuteReader())
+                    {
+                        while (reader.Read()) {
+                            commentData.Add(new CommentData
+                            {
+                                CommentId = (int)reader["commentId"],
+                                PostId    = (int)reader["postId"],
+                                UserId = (int)reader["userId"],
+                                CommentText = reader["commentText"].ToString(),
+                                CommentedAt = (DateTime)reader["commentedAt"],
+                                FirstName = reader["firstName"].ToString(),
+                                LastName = reader["lastName"].ToString(),
+                                ProfilePicture= reader["profilePicture"].ToString(),
+                            });                       
+                        }
+                    }
+                }
+            }
+            return commentData;        
+        }
+
+
+
+        /// <summary>
+        /// Delete the comment 
+        /// </summary>
+        /// <param name="commentId"></param>
+        public void DeleteComment(int commentId)
+        {
+            using(var connection = new SqlConnection(connectionString))
+            {
+                using(var command = new SqlCommand("SPD_Comment", connection))
+                {
+                    command.CommandType= CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@CommentId", commentId);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+
             }
         }
 

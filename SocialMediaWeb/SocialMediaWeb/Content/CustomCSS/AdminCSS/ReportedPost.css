@@ -1,0 +1,59 @@
+﻿
+.reported-posts-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid ;
+}
+
+.post-header-item {
+    flex: 1;
+    text-align: center;
+}
+
+
+.reported-posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+
+.reported-post-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.post-content, .post-image, .post-reason, .post-actions {
+    flex: 1;
+    text-align: center;
+}
+
+    
+    .post-image img {
+        max-width: 200px;
+        max-height: 150px;
+        
+    }
+
+
+.post-actions {
+    text-align: center;
+}
+
+
+
+.button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration:none;
+}

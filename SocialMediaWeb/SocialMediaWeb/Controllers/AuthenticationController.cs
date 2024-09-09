@@ -25,11 +25,11 @@ namespace SocialMediaWeb.Controllers
                 ViewBag.States = authenticationRepository.GetStates();
                 return View();
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
                 
-                Console.WriteLine("NOTHING");
-                return Content("error3");
+                Console.WriteLine(exception.Message);
+                return RedirectToAction("Signup", "Authentication");
             }
         }
 
@@ -86,11 +86,11 @@ namespace SocialMediaWeb.Controllers
                     authenticationRepository.AddUser(user, profile);
                     return RedirectToAction("Login", "Authentication");
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
                    
-                    Console.WriteLine(ex.Message);
-                    return Content("error4");
+                    Console.WriteLine(exception.Message);
+                    return RedirectToAction("Signup", "Authentication");
                 }
             }
 
@@ -98,11 +98,11 @@ namespace SocialMediaWeb.Controllers
             {
                 ViewBag.States = authenticationRepository.GetStates();
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
                
-                Console.WriteLine(ex.Message);
-                return Content("error5");
+                Console.WriteLine(exception.Message);
+                return RedirectToAction("Signup", "Authentication");
             }
 
             return View(signup);
@@ -128,10 +128,10 @@ namespace SocialMediaWeb.Controllers
 
                 return Json(cities, JsonRequestBehavior.AllowGet);
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
                 
-                Console.WriteLine("json error");
+                Console.WriteLine("json error",exception.Message);
                 return Json(new List<SelectListItem>(), JsonRequestBehavior.AllowGet); 
             }
         }
@@ -155,13 +155,13 @@ namespace SocialMediaWeb.Controllers
         /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(LoginViewModel model)
+        public ActionResult Login(LoginViewModel loginViewModel)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    var user = authenticationRepository.AuthenticateUser(model.Email, model.Password);
+                    var user = authenticationRepository.AuthenticateUser(loginViewModel.Email, loginViewModel.Password);
 
                     if (user != null)
                     {
@@ -184,14 +184,14 @@ namespace SocialMediaWeb.Controllers
                         ModelState.AddModelError("", "Invalid email or password.");
                     }
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
                     
-                    Console.WriteLine(ex.Message);
-                    return Content("Some thing is not correct");
+                    Console.WriteLine(exception.Message);
+                    return RedirectToAction("Authentication", "Login");
                 }
             }
-            return View(model);
+            return View(loginViewModel);
         }
 
 

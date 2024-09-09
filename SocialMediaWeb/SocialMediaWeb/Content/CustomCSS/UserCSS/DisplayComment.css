@@ -1,0 +1,54 @@
+﻿
+
+.post-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.post-header, .comment-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture, .comment-profile-picture {
+    margin-right: 10px;
+}
+
+.picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+
+.post-content, .comment-text {
+    margin-top: 10px;
+}
+
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment {
+    margin-bottom: 15px;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.comment-actions {
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 5px 10px;
+}
+
+.post-picture{
+    width:500px;
+    height:250px;
+}

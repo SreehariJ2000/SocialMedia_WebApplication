@@ -3,25 +3,26 @@
     ViewBag.Title = "AdminAddPost";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
+<link href="~/Content/CustomCSS/AdminCSS/AdminAddPost.css" rel="stylesheet" />
 
-
-
-
-
-<h2>AddPost</h2>
 @using (Html.BeginForm("AdminAddPost", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
-    <div class="">
-        @Html.LabelFor(model => model.Content)
-        @Html.TextAreaFor(model => model.Content, new { @class = "" })
-    </div>
+    <div class="add-post">
+        <div>
+            <h2>Add Post</h2>
+        </div>
 
-    <div class="">
-        @Html.LabelFor(model => model.ImageFile)
-        @Html.TextBoxFor(model => model.ImageFile, new { type = "file", @class = "" })
-    </div>
+        <div class="form-group">
+            @Html.TextAreaFor(model => model.Content, new { @class = "form-input", placeholder = "What is in your mind" })
+        </div>
 
-    <button type="submit" class="">Submit</button>
+        <div class="form-group">
+            @Html.TextBoxFor(model => model.ImageFile, new { type = "file", @class = "form-input" })
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </div>
 }
+
