@@ -19,7 +19,7 @@
         <span class="error-message" id="ContentError"></span>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ImageFile)
+            @Html.LabelFor(model => model.ImageFile, "Upload Image")
             @Html.TextBoxFor(model => model.ImageFile, new { type = "file", @class = "", id = "ImageFile" })
         </div>
         <span class="error-message" id="ImageError"></span>

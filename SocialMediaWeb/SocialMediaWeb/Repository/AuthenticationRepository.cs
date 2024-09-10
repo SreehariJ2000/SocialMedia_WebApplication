@@ -137,16 +137,21 @@ namespace SocialMediaWeb.Repository
                     {
                         if (reader.Read())
                         {
-                            string hashedPassword = reader["userPassword"].ToString();
-                            if (BCrypt.Net.BCrypt.Verify(password, hashedPassword))
+                            if (Convert.ToInt32(reader["isActive"]) == 1)
                             {
-                                user = new User
+                                string hashedPassword = reader["userPassword"].ToString();
+                                if (BCrypt.Net.BCrypt.Verify(password, hashedPassword))
                                 {
-                                    UserID = Convert.ToInt32(reader["userID"]),
-                                    Email = reader["email"].ToString(),
-                                    Role = reader["role"].ToString()
-                                };
+                                    user = new User
+                                    {
+                                        UserID = Convert.ToInt32(reader["userID"]),
+                                        Email = reader["email"].ToString(),
+                                        Role = reader["role"].ToString()
+                                    };
+                                }
+
                             }
+                            
                         }
                     }
                 }

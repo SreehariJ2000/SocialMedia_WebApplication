@@ -52,6 +52,7 @@ namespace SocialMediaWeb.Repository
                                 Email = reader["email"].ToString(),
                                 FirstName = reader["firstName"].ToString(),
                                 LastName = reader["lastName"].ToString(),
+                                isActive = Convert.ToInt32(reader["isActive"]),
                                 DateOfBirth = Convert.ToDateTime(reader["dateOfBirth"]),
                                 Gender = reader["gender"].ToString(),
                                 ProfilePicture = reader["profilePicture"].ToString() ,
@@ -592,6 +593,52 @@ namespace SocialMediaWeb.Repository
 
             }
         }
+
+
+        public int ToggleLikePost(int postId, int userId)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand("SPU_ToggleLike", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PostId", postId);
+                command.Parameters.AddWithValue("@UserId", userId);
+
+                connection.Open();
+                var likeCount = (int)command.ExecuteScalar(); 
+                return likeCount;
+            }
+        }
+
+
+
+        public bool IsLikedPost(int userId, int postId)
+        {
+            bool hasLiked = false;
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand("SPS_HasUserLikedPost", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                // Add parameters
+                command.Parameters.AddWithValue("@PostId", postId);
+                command.Parameters.AddWithValue("@UserId", userId);
+
+                connection.Open();
+
+                // Execute the command and get the result (1 if liked, 0 if not)
+                var result = command.ExecuteScalar();
+
+                if (result != null && Convert.ToInt32(result) == 1)
+                {
+                    hasLiked = true;
+                }
+            }
+
+            return hasLiked;
+        }
+
 
 
 

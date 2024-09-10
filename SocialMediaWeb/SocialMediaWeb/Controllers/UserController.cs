@@ -181,18 +181,16 @@ namespace SocialMediaWeb.Controllers
                     {
                         string hashedNewPassword = BCrypt.Net.BCrypt.HashPassword(changePassword.NewPassword);
                         userRepository.UpdatePassword(userEmail, hashedNewPassword);
-
+                        TempData["Sucess-Message"] = "Password updated Please login again";
                         return RedirectToAction("Login", "Authentication"); 
                     }
                     else
                     {
- 
                         TempData["ErrorMessage"] = "Old password is incorrect";
                     }
                 }
                 catch (Exception exception)
-                {
-                    
+                {                   
                     Console.WriteLine(exception.Message);
                     ModelState.AddModelError("", "An error occurred while changing the password.");
                 }
@@ -547,6 +545,31 @@ namespace SocialMediaWeb.Controllers
             }
             return RedirectToAction("UserDashboard", "User");
         }
+
+
+        [HttpPost]
+        public JsonResult ToggleLikePost(int postId)
+        {
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            // Call repository to toggle the like
+            int updatedLikeCount = userRepository.ToggleLikePost(postId, userId);
+
+            return Json(new { success = true, likeCount = updatedLikeCount });
+        }
+
+
+        [HttpPost]
+        public JsonResult CheckLikeStatus(int postId)
+        {
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            // Check if the user has liked the post
+            bool hasLiked = userRepository.IsLikedPost(userId, postId);  // Check if the user has liked the post
+
+            return Json(new { liked = hasLiked });
+        }
+
 
 
 

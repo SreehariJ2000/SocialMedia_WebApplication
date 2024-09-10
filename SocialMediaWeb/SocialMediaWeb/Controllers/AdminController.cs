@@ -169,5 +169,37 @@ namespace SocialMediaWeb.Controllers
             return View(changePassword);
         }
 
+
+        public ActionResult UserList()
+        {
+            var users = adminRepository.GetUsersStatus();
+            return View(users);
+        }
+
+
+        public ActionResult ViewUserDetails(int id)
+        {
+            var user = userRepository.GetUserDetails(id);
+            return View(user);
+        }
+
+        public ActionResult ChangeUserStatus(int id, string status)
+        {
+            try
+            {
+                adminRepository.UpdateUserStatus(id, status);
+                return RedirectToAction("ViewUserDetails", new { id = id });
+
+
+            }
+            catch (Exception exception)
+            {
+                return RedirectToAction("ViewUserDetails", new { id = id });
+            }
+
+           ;
+        }
+
+
     }
 }

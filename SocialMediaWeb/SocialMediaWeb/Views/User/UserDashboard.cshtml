@@ -52,8 +52,8 @@
 
                     <div class="action-item">
 
-                        <span>@post.LikeCount</span> Likes
-                        <i class="fas fa-thumbs-up like-button"></i>
+                        <span id="like-count-@post.PostId">@post.LikeCount</span> Likes
+                        <i class="fas fa-thumbs-up like-button" id="like-button-@post.PostId" data-post-id="@post.PostId" data-liked="false" style="color: black;"></i>
                     </div>
 
                     <div class="action-item">
@@ -90,3 +90,7 @@
 </div>
 
 
+@section Scripts {
+    <script src="~/Scripts/CustomScript/HomeScript/UserDashboard.js"></script>
+
+}

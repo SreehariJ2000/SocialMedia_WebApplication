@@ -67,5 +67,65 @@ namespace SocialMediaWeb.Repository
             }
         }
 
+
+        /// <summary>
+        /// Get user details to admin
+        /// </summary>
+        /// <returns></returns>
+        public List<ProfileViewModel> GetUsersStatus()
+        {
+            List<ProfileViewModel> users = new List<ProfileViewModel>();
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPS_GetUserStatus", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    connection.Open();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            users.Add(new ProfileViewModel
+                            {
+                                UserID = Convert.ToInt32(reader["userID"]),
+                                Email = reader["email"].ToString(),
+                                FirstName = reader["firstName"].ToString(),
+                                LastName = reader["lastName"].ToString(),
+                                isActive = Convert.ToInt32(reader["isActive"])
+                            });
+                        }
+                    }
+                }
+            }
+
+            return users;
+        }
+
+
+        /// <summary>
+        /// Activate and de activate user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="isActive"></param>
+        public void UpdateUserStatus(int userId, string isActive)
+        {
+            
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPU_UserStatus", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@UserID", userId);
+                    command.Parameters.AddWithValue("@IsActive", Convert.ToInt32(isActive));
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
     }
 }

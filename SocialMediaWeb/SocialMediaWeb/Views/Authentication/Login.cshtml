@@ -6,48 +6,54 @@
 }
 <link href="~/Content/CustomCSS/Login.css?v=@DateTime.Now.Ticks" rel="stylesheet" />
 
+@if (TempData["Sucess-Message"] != null)
+{
+    <div class="password-change sucess">
+        @TempData["Sucess-Message"]
+    </div>
+}
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal login-container">
+    <div class="form-horizontal login-container">
 
-    <h2>Sign in </h2>
+        <h2>Sign in </h2>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
-        <div class="input-container">
-            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+            <div class="input-container">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
+            <div class="input-container">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="checkbox-container">
+                <input type="checkbox" id="RememberMe" name="RememberMe" />
+                <label for="RememberMe">Remember Me</label>
+            </div>
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <div class="button-container">
+                <input type="submit" value="Sign in" class="button" />
+            </div>
+        </div>
+
+
+        <div class="sign-up-container">
+            <p>Don't have an account? @Html.ActionLink("Sign up", "Signup", "Authentication")</p>
         </div>
     </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
-        <div class="input-container">
-            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="checkbox-container">
-            <input type="checkbox" id="RememberMe" name="RememberMe" />
-            <label for="RememberMe">Remember Me</label>
-        </div>
-    </div>
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-    <div class="form-group">
-        <div class="button-container">
-            <input type="submit" value="Sign in" class="button" />
-        </div>
-    </div>
-
-
-    <div class="sign-up-container">
-        <p>Don't have an account? @Html.ActionLink("Sign up", "Signup", "Authentication")</p>
-    </div>
-</div>
 }

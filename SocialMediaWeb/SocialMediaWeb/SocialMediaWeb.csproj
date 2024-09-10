@@ -175,6 +175,8 @@
     <Content Include="Content\CustomCSS\AdminCSS\AdminDashboard.css" />
     <Content Include="Content\CustomCSS\AdminCSS\AdminLayout.css" />
     <Content Include="Content\CustomCSS\AdminCSS\ReportedPost.css" />
+    <Content Include="Content\CustomCSS\AdminCSS\ViewUserDetails.css" />
+    <Content Include="Content\CustomCSS\AlertBox.css" />
     <Content Include="Content\CustomCSS\ChangePassword.css" />
     <Content Include="Content\CustomCSS\HomeCSS\Aboutus.css" />
     <Content Include="Content\CustomCSS\HomeCSS\Contactus.css" />
@@ -210,6 +212,7 @@
     <Content Include="Scripts\CustomScript\HomeScript\EditProfile.js" />
     <Content Include="Scripts\CustomScript\HomeScript\FindFriends.js" />
     <Content Include="Scripts\CustomScript\HomeScript\HomeCarousel.js" />
+    <Content Include="Scripts\CustomScript\HomeScript\UserDashboard.js" />
     <Content Include="Scripts\CustomScript\Signup.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -253,6 +256,8 @@
     <Content Include="Views\Admin\AdminAddPost.cshtml" />
     <Content Include="Views\User\DisplayComment.cshtml" />
     <Content Include="Views\Admin\AdminChangePassword.cshtml" />
+    <Content Include="Views\Admin\UserList.cshtml" />
+    <Content Include="Views\Admin\ViewUserDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

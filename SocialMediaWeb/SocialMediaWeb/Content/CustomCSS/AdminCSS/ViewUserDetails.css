@@ -1,0 +1,52 @@
+﻿/* UserDetails.css */
+.user-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid ;
+}
+
+.user-detail-label {
+    font-weight: bold;
+    width: 30%;
+}
+
+.user-detail-value {
+    width: 65%;
+    
+}
+
+.profile-picture {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-success {
+    background-color: #28a745;
+}
+
+   

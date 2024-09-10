@@ -1,0 +1,76 @@
+﻿@model SocialMediaWeb.Models.ProfileViewModel
+
+@{
+    ViewBag.Title = "ViewUserDetails";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<link href="~/Content/CustomCSS/AdminCSS/ViewUserDetails.css" rel="stylesheet" />
+<h2>View User Details</h2>
+
+<div class="user-details-container">
+    <div class="user-detail-item">
+        
+        <div class="user-detail-value">
+            <img src="data:image/jpeg;base64,@Model.ProfilePicture" alt="Profile Picture" class="profile-picture" />
+        </div>
+    </div>
+
+    <div class="user-detail-item">
+        <div class="user-detail-label">Email</div>
+        <div class="user-detail-value">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+    </div>
+
+    <div class="user-detail-item">
+        <div class="user-detail-label">First Name</div>
+        <div class="user-detail-value">
+            @Html.DisplayFor(model => model.FirstName)
+        </div>
+    </div>
+
+    <div class="user-detail-item">
+        <div class="user-detail-label">Last Name</div>
+        <div class="user-detail-value">
+            @Html.DisplayFor(model => model.LastName)
+        </div>
+    </div>
+
+    <div class="user-detail-item">
+        <div class="user-detail-label">Phone Number</div>
+        <div class="user-detail-value">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </div>
+    </div>
+
+    <div class="user-detail-item">
+        <div class="user-detail-label">Address</div>
+        <div class="user-detail-value">
+            @Html.DisplayFor(model => model.Address)
+        </div>
+    </div>
+
+    <div class="user-detail-item">
+        <div class="user-detail-label">State</div>
+        <div class="user-detail-value">
+            @Html.DisplayFor(model => model.StateName)
+        </div>
+    </div>
+
+    <div class="user-detail-item">
+        <div class="user-detail-label">District</div>
+        <div class="user-detail-value">
+            @Html.DisplayFor(model => model.DistrictName)
+        </div>
+    </div>
+
+    <div class="user-detail-item">
+        <div class="user-detail-label">Status</div>
+        <div class="user-detail-value">
+            @(Model.isActive == 1
+                ? Html.ActionLink("Deactivate User", "ChangeUserStatus", new { id = Model.UserID, status = 0 }, new { @class = "btn btn-danger" })
+                : Html.ActionLink("Activate User", "ChangeUserStatus", new { id = Model.UserID, status = 1 }, new { @class = "btn btn-success" })
+            )
+        </div>
+    </div>
+</div>

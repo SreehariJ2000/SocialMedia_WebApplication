@@ -4,8 +4,17 @@
     padding: 20px;
 }
 
-.contact-form,
-.location-map {
+.contact-us {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.contact-form {
+    box-shadow: 0 0 2px black;
+}
+
+.location-map,
+.contact-form {
     width: 48%;
 }
 
@@ -18,32 +27,39 @@
         margin-bottom: 5px;
     }
 
-    .contact-form input,
-    .contact-form textarea {
-        margin-bottom: 10px;
-        padding: 8px;
-        font-size: 14px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
+.name-row {
+    display: flex;
+    justify-content: space-between;
+}
 
-    .contact-form button {
-        padding: 10px;
-        background-color: #343a40;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
+.name-input {
+    width: 48%;
+}
 
-        .contact-form button:hover {
-            background-color: #495057;
-        }
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-    .location-map h2,
-    .contact-form h2 {
-        margin-bottom: 15px;
-    }
+.contact-form button {
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    
+
+.location-map h2,
+.contact-form h2 {
+    margin-bottom: 15px;
+}
 
 .map-container {
     margin-bottom: 15px;
