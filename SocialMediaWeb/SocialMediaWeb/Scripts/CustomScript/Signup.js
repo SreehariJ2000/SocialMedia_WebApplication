@@ -24,7 +24,7 @@
      // Functions
      const namePattern = /^[a-zA-Z\s]+$/;
      function validateName(inputId, errorId, fieldName) {
-         let nameValue = $(inputId).val().trim();
+         let nameValue = $(inputId).val().trim();    
          let errorElement = $(errorId);
 
          if (nameValue === "") {
@@ -60,6 +60,7 @@
      //address
      function validateAddress() {
          var address = $('#Address').val().trim();
+        
          var isValid = true;
 
          // Clear previous errors

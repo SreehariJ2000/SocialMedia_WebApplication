@@ -16,6 +16,8 @@
 .location-map,
 .contact-form {
     width: 48%;
+    box-shadow: 0 0 2px black;
+
 }
 
     .contact-form form {
@@ -63,6 +65,8 @@
 
 .map-container {
     margin-bottom: 15px;
+  
+    
 }
 
 address {

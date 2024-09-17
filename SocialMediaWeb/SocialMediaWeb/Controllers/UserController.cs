@@ -11,10 +11,12 @@ using System.Web.Mvc;
 
 namespace SocialMediaWeb.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         private UserRepository userRepository = new UserRepository();
         AuthenticationRepository authenticationRepository = new AuthenticationRepository();
+        ErrorLog errorLog = new ErrorLog();
 
         public ActionResult UserDashboard()
         {
@@ -24,19 +26,15 @@ namespace SocialMediaWeb.Controllers
                 return View(posts);
             }
             catch (SqlException sqlException)
-            {
-               
+            {            
                 return Content("Database error occurred.");
             }
             catch (Exception exception)
             {
+                errorLog.LogError(exception);
                 return RedirectToAction("Login", "Authentication");
             }
-
-
         }
-
-
         /// <summary>
         /// To see the profile of user who is currently login
         /// </summary>
@@ -47,22 +45,18 @@ namespace SocialMediaWeb.Controllers
             {
                 int userId = Convert.ToInt32(Session["UserID"]);
                 ProfileViewModel model = userRepository.GetUserDetails(userId);
-
                 if (model == null)
                 {
                     return HttpNotFound("User not found.");
                 }
-
                 return View(model);
             }
             catch (Exception exception)
             {
-
+                errorLog.LogError(exception);
                 return RedirectToAction("UserDashboard", "User");
             }
         }
-
-
 
         /// <summary>
         /// edit the profile of logged in user
@@ -72,15 +66,12 @@ namespace SocialMediaWeb.Controllers
         public ActionResult EditProfile(int id)
         {
             try
-            {
-                
-                var user = userRepository.GetUserDetailsById(id);
-               
+            {              
+                var user = userRepository.GetUserDetailsById(id);             
                 if (user == null)
                 {
                     return HttpNotFound();
                 }
-
                 var viewModel = new Signup
                 {
                     Email = user.Email,
@@ -100,11 +91,10 @@ namespace SocialMediaWeb.Controllers
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.Message);
+                errorLog.LogError(exception);
                 return Content("Error loading profile.");
             }
         }
-
         /// <summary>
         /// submit the edit details form to update in database
         /// </summary>
@@ -119,8 +109,6 @@ namespace SocialMediaWeb.Controllers
                 try
                 {
                     string profilePicture = null;
-
-
                     if (Request.Files["ProfilePicture"] != null && Request.Files["ProfilePicture"].ContentLength > 0)
                     {
                         using (var memoryStream = new MemoryStream())
@@ -141,15 +129,13 @@ namespace SocialMediaWeb.Controllers
                 }
                 catch (Exception exception)
                 {
-                    
-                    Console.WriteLine(exception.Message);
+                    errorLog.LogError(exception);
                     int userId = Convert.ToInt32(Session["UserID"]);
                     return RedirectToAction("EditProfile", new { id = userId });
                 }
             }
             return View(signup);
         }
-
 
         /// <summary>
         /// Load the change password html.
@@ -190,16 +176,13 @@ namespace SocialMediaWeb.Controllers
                     }
                 }
                 catch (Exception exception)
-                {                   
-                    Console.WriteLine(exception.Message);
+                {
+                    errorLog.LogError(exception);
                     ModelState.AddModelError("", "An error occurred while changing the password.");
                 }
             }
-
             return View(changePassword);
         }
-
-
 
         /// <summary>
         /// User can add a new post
@@ -220,7 +203,6 @@ namespace SocialMediaWeb.Controllers
                 {
                     string imageBase64 = null;
                     string imageType = null;
-
                     if (postViewModel.ImageFile != null && postViewModel.ImageFile.ContentLength > 0)
                     {
                         using (var memoryStream = new MemoryStream())
@@ -231,10 +213,8 @@ namespace SocialMediaWeb.Controllers
                             imageType= postViewModel.ImageFile.ContentType;
                         }
                     }
-
                     var userId = (int)Session["UserId"]; 
                     var createdAt = DateTime.Now;
-
                     var post = new Post
                     {
                         UserId = userId,
@@ -243,21 +223,18 @@ namespace SocialMediaWeb.Controllers
                         CreatedAt = createdAt,
                         ImageType= imageType
                     };
-
                     userRepository.AddPost(post);
                     return RedirectToAction("UserDashboard"); 
                 }
                 catch (Exception exception)
                 {
-                   
+                    errorLog.LogError(exception);
                     Console.WriteLine(exception.Message);
                     ModelState.AddModelError("", "An error occurred while adding the post.");
                 }
             }
-
             return View("AddPost", postViewModel);
         }
-
 
         /// <summary>
         /// managing the post particular user added. 
@@ -273,12 +250,10 @@ namespace SocialMediaWeb.Controllers
             }
             catch (Exception exception)
             {
-                
-                Console.WriteLine(exception.Message);
+                errorLog.LogError(exception);
                 return RedirectToAction("UserDashboard");
             }
         }
-
 
     /// <summary>
     /// Delete a post which is added by the corresponding user
@@ -293,12 +268,11 @@ namespace SocialMediaWeb.Controllers
                 return RedirectToAction("ManagePost");
             }
             catch (Exception exception)
-            {          
-                Console.WriteLine(exception.Message);
+            {
+                errorLog.LogError(exception);
                 return RedirectToAction("ManagePost");
             }
         }
-
 
         /// <summary>
         /// User can report the post if some harmful content is there.
@@ -314,7 +288,6 @@ namespace SocialMediaWeb.Controllers
                 {
                     return HttpNotFound();
                 }
-
                 var viewModel = new ReportPost
                 {
                     PostId = post.PostId,
@@ -322,16 +295,15 @@ namespace SocialMediaWeb.Controllers
                     ImageUrl = post.ImageUrl,
                     ReportedBy = (int)Session["UserID"]
                 };
-
                 return View(viewModel);
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-               Console.Write(ex.Message);
+                errorLog.LogError(exception);
+                Console.Write(exception.Message);
                 return RedirectToAction("UserDashboard");
             }
         }
-
 
         /// <summary>
         /// store the data that reported by user
@@ -349,16 +321,14 @@ namespace SocialMediaWeb.Controllers
                     TempData["Message"] = "You reported the post";
                     return RedirectToAction("UserDashboard");
                 }
-
                 return View(reportPost);
             }
             catch(Exception exception)
             {
-            
+                errorLog.LogError(exception);
                 Console.WriteLine(exception.Message);
                 return RedirectToAction("UserDashboard");
-             }
-           
+             }          
         }
 
         /// <summary>
@@ -370,7 +340,6 @@ namespace SocialMediaWeb.Controllers
             return View();
         }
 
-
         /// <summary>
         /// search friends based on name
         /// </summary>
@@ -378,11 +347,9 @@ namespace SocialMediaWeb.Controllers
         /// <returns></returns>
         public ActionResult SearchFriends(string searchTerm)
         {
-
             try
             {
                 var profiles = userRepository.SearchProfiles(searchTerm);
-
                 var result = profiles.Select(p => new
                 {
                     p.UserID,
@@ -392,15 +359,12 @@ namespace SocialMediaWeb.Controllers
                 });
                 return Json(result, JsonRequestBehavior.AllowGet);
             }
-            catch (Exception exception) { 
-                   Console.WriteLine(exception.Message);
+            catch (Exception exception) {
+                errorLog.LogError(exception);
+                Console.WriteLine(exception.Message);
                 return RedirectToAction("FindFriends");
-
-            }
-            
+            }          
         }
-
-
 
         /// <summary>
         /// To view friends profile
@@ -416,7 +380,6 @@ namespace SocialMediaWeb.Controllers
                 var isFollowing = userRepository.IsUserFollowing(loggedInUserId, profile.UserID);
                 var followersCount = userRepository.GetFollowersCount(profile.UserID);
                 var followingCount = userRepository.GetFollowingCount(profile.UserID);
-
                 var viewModel = new FriendsProfile
                 {
                     Profile = profile,
@@ -425,16 +388,14 @@ namespace SocialMediaWeb.Controllers
                     FollowersCount = followersCount,
                     FollowingCount = followingCount
                 };
-
                 return View(viewModel);
             }
-            catch (Exception exception) { 
-                Console.WriteLine(exception.Message);
+            catch (Exception exception) {
+                errorLog.LogError(exception);
                 return RedirectToAction("FindFriends");
             }
             
         }
-
 
         /// <summary>
         /// follow a Person
@@ -449,11 +410,11 @@ namespace SocialMediaWeb.Controllers
             {
                 var loggedInUserId = Convert.ToInt32(Session["UserID"]);
                 userRepository.FollowUser(loggedInUserId, userId);
-
                 return RedirectToAction("ViewFriendsProfile", new { userId });
             }
             catch (Exception exception)
             {
+                errorLog.LogError(exception);
                 return RedirectToAction("ViewFriendsProfile", new { userId });
             }
         }
@@ -471,16 +432,14 @@ namespace SocialMediaWeb.Controllers
             {
                 var loggedInUserId = Convert.ToInt32(Session["UserID"]);
                 userRepository.UnfollowUser(loggedInUserId, userId);
-
                 return RedirectToAction("ViewFriendsProfile", new { userId });
             }
             catch (Exception exception)
             {
+                errorLog.LogError(exception);
                 return RedirectToAction("ViewFriendsProfile", new { userId });
             }
         }
-
-
         /// <summary>
         /// Add comment to a particular post
         /// </summary>
@@ -495,15 +454,18 @@ namespace SocialMediaWeb.Controllers
             {
                 int userId = Convert.ToInt32(Session["UserID"]);
                 userRepository.AddComment(postId, userId, commentText);
+                var userDetails= userRepository.GetUserDetails(userId);
+                string message = commentText;
+                string messageTitle = $"{userDetails.FirstName} {userDetails.LastName} commented on your post";
+                userRepository.AddNotification(postId, message , messageTitle);
                 return RedirectToAction("UserDashboard");
             }
             catch (Exception exception)
-            {     
-                Console.WriteLine($"An error occurred while adding the comment: {exception.Message}");            
+            {
+                errorLog.LogError(exception);
                 return RedirectToAction("UserDashboard");
             }
         }
-
 
         /// <summary>
         /// Display all the comments of particular post
@@ -512,19 +474,24 @@ namespace SocialMediaWeb.Controllers
         /// <returns></returns>
         public ActionResult DisplayComment(int postId)
         {
-            var postDetails = userRepository.PostByPostId(postId);
-            var postComments = userRepository.CommentsByPostId(postId);
-            var viewModel = new ViewComments
+            try 
             {
-                PostDetails = postDetails,
-                Comments = postComments
-            };
-            ViewBag.LoggedInUserId = Convert.ToInt32(Session["UserID"]);
-
-            return View(viewModel);
-
+                var postDetails = userRepository.PostByPostId(postId);
+                var postComments = userRepository.CommentsByPostId(postId);
+                var viewModel = new ViewComments
+                {
+                    PostDetails = postDetails,
+                    Comments = postComments
+                };
+                ViewBag.LoggedInUserId = Convert.ToInt32(Session["UserID"]);
+                return View(viewModel);
+            }
+            catch (Exception exception)
+            {
+                errorLog.LogError(exception);
+                return RedirectToAction("UserDashboard");
+            }        
         }
-
 
         /// <summary>
         /// Delete the comment added by the login user
@@ -541,34 +508,68 @@ namespace SocialMediaWeb.Controllers
             }
             catch (Exception exception)
             {
+                errorLog.LogError(exception);
                 TempData["Message"] = "Error deleting comment. Please try again.";
             }
             return RedirectToAction("UserDashboard", "User");
         }
 
-
+        /// <summary>
+        /// For like an unlike post
+        /// </summary>
+        /// <param name="postId"></param>
+        /// <returns></returns>
         [HttpPost]
         public JsonResult ToggleLikePost(int postId)
         {
             int userId = Convert.ToInt32(Session["UserID"]);
-
-            // Call repository to toggle the like
             int updatedLikeCount = userRepository.ToggleLikePost(postId, userId);
-
             return Json(new { success = true, likeCount = updatedLikeCount });
         }
 
-
+        /// <summary>
+        /// check if user if already like the post
+        /// </summary>
+        /// <param name="postId"></param>
+        /// <returns></returns>
         [HttpPost]
         public JsonResult CheckLikeStatus(int postId)
         {
             int userId = Convert.ToInt32(Session["UserID"]);
-
-            // Check if the user has liked the post
-            bool hasLiked = userRepository.IsLikedPost(userId, postId);  // Check if the user has liked the post
-
+            bool hasLiked = userRepository.IsLikedPost(userId, postId);  
             return Json(new { liked = hasLiked });
         }
+
+        /// <summary>
+        /// get notification to user
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public JsonResult GetNotifications()
+        {
+            int userId = Convert.ToInt32(Session["UserId"]);
+            var notifications = userRepository.GetNotifications(userId);
+            return Json(notifications, JsonRequestBehavior.AllowGet);
+        }
+        /// <summary>
+        /// update notification
+        /// </summary>
+        /// <param name="notificationId"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public JsonResult UpdateViewStatus(int notificationId)
+        {
+            try
+            {
+                userRepository.UpdateViewStatus(notificationId);
+                return Json(new { success = true });
+            }
+            catch (Exception exception)
+            {
+                return Json(new { success = false, error = exception.Message });
+            }
+        }
+
 
 
 

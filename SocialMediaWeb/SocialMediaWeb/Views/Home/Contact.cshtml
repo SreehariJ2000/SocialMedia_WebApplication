@@ -1,6 +1,9 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@model SocialMediaWeb.Models.ContactUs
+
+@{
+    ViewBag.Title = "Contact Us";
 }
+
 <!-- CSS -->
 <link href="~/Content/CustomCSS/HomeCSS/Contactus.css?v=@DateTime.Now.Ticks" rel="stylesheet" />
 
@@ -8,26 +11,40 @@
     <div class="contact-form">
         <div class="contact-us">
             <h2>Contact Us</h2>
-            <form>
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+
+            @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
                 <div class="name-row">
                     <div class="name-input">
-                        <label for="firstName">First Name:</label>
-                        <input type="text" id="firstName" name="firstName" required>
+                        @Html.LabelFor(model => model.FirstName)
+                        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
                     </div>
                     <div class="name-input">
-                        <label for="lastName">Last Name:</label>
-                        <input type="text" id="lastName" name="lastName" required>
+                        @Html.LabelFor(model => model.LastName)
+                        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
                     </div>
                 </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                @Html.LabelFor(model => model.Email)
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
 
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="5" required></textarea>
+                @Html.LabelFor(model => model.Description)
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 5 })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
 
-                <button type="submit">Submit</button>
-            </form>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            }
         </div>
     </div>
 

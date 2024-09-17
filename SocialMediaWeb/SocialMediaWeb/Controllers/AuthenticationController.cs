@@ -6,14 +6,17 @@ using System.Web.Mvc;
 using SocialMediaWeb.Models;
 using SocialMediaWeb.Repository;
 using BCrypt.Net;
-
+using System.Web;
+using System.Configuration;
+using System.Web.Security;
 namespace SocialMediaWeb.Controllers
 {
     public class AuthenticationController : Controller
     {
          AuthenticationRepository authenticationRepository = new AuthenticationRepository();
+        ErrorLog errorLog = new ErrorLog();
 
-        
+
         /// <summary>
         /// For rendering the sign up page . 
         /// </summary>
@@ -27,7 +30,7 @@ namespace SocialMediaWeb.Controllers
             }
             catch (Exception exception)
             {
-                
+                errorLog.LogError(exception);
                 Console.WriteLine(exception.Message);
                 return RedirectToAction("Signup", "Authentication");
             }
@@ -88,7 +91,7 @@ namespace SocialMediaWeb.Controllers
                 }
                 catch (Exception exception)
                 {
-                   
+                    errorLog.LogError(exception);
                     Console.WriteLine(exception.Message);
                     return RedirectToAction("Signup", "Authentication");
                 }
@@ -100,7 +103,7 @@ namespace SocialMediaWeb.Controllers
             }
             catch (Exception exception)
             {
-               
+                errorLog.LogError(exception);
                 Console.WriteLine(exception.Message);
                 return RedirectToAction("Signup", "Authentication");
             }
@@ -130,7 +133,7 @@ namespace SocialMediaWeb.Controllers
             }
             catch (Exception exception)
             {
-                
+                errorLog.LogError(exception);
                 Console.WriteLine("json error",exception.Message);
                 return Json(new List<SelectListItem>(), JsonRequestBehavior.AllowGet); 
             }
@@ -165,7 +168,7 @@ namespace SocialMediaWeb.Controllers
 
                     if (user != null)
                     {
-                        
+                        FormsAuthentication.SetAuthCookie(user.Email, false);
                         Session["UserID"] = user.UserID;
                         Session["UserEmail"] = user.Email;
                         Session["UserRole"] = user.Role;
@@ -186,8 +189,8 @@ namespace SocialMediaWeb.Controllers
                 }
                 catch (Exception exception)
                 {
-                    
-                    Console.WriteLine(exception.Message);
+
+                    errorLog.LogError(exception);
                     return RedirectToAction("Authentication", "Login");
                 }
             }
@@ -203,6 +206,10 @@ namespace SocialMediaWeb.Controllers
         {
             Session.Clear();
             Session.Abandon();
+            FormsAuthentication.SignOut();
+            Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetNoStore();
             return RedirectToAction("Login");
         }
 

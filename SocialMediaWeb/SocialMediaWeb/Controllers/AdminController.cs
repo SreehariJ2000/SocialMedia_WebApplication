@@ -7,14 +7,17 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebGrease.Activities;
 
 namespace SocialMediaWeb.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private AdminRepository adminRepository = new AdminRepository();
         private UserRepository userRepository = new UserRepository();
         AuthenticationRepository authenticationRepository = new AuthenticationRepository();
+        ErrorLog errorLog = new ErrorLog();
 
 
         public ActionResult AdminDashboard()
@@ -26,7 +29,7 @@ namespace SocialMediaWeb.Controllers
             }
             catch (Exception exception)
             {
-               
+                errorLog.LogError(exception);
                 Console.WriteLine(exception.Message);
                 return View(new List<PostDisplayViewModel>());
             }
@@ -59,7 +62,7 @@ namespace SocialMediaWeb.Controllers
             }
             catch (Exception exception)
             {
-
+                errorLog.LogError(exception);
                 Console.WriteLine(exception.Message);
                 return RedirectToAction("ReportedPost");
             }
@@ -119,7 +122,7 @@ namespace SocialMediaWeb.Controllers
                 }
                 catch (Exception exception)
                 {
-
+                    errorLog.LogError(exception);
                     Console.WriteLine(exception.Message);
                     ModelState.AddModelError("", "An error occurred while adding the post.");
                 }
@@ -160,7 +163,7 @@ namespace SocialMediaWeb.Controllers
                 }
                 catch (Exception exception)
                 {
-
+                    errorLog.LogError(exception);
                     Console.WriteLine(exception.Message);
                     ModelState.AddModelError("", "An error occurred while changing the password.");
                 }
@@ -194,6 +197,7 @@ namespace SocialMediaWeb.Controllers
             }
             catch (Exception exception)
             {
+                errorLog.LogError(exception);
                 return RedirectToAction("ViewUserDetails", new { id = id });
             }
 

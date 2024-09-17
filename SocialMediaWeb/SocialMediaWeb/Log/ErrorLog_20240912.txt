@@ -1,0 +1,10 @@
+========================================
+Timestamp: 2024-09-12 11:54:26
+Message: Object reference not set to an instance of an object.
+Stack Trace:    at SocialMediaWeb.Controllers.UserController.ManagePost() in D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\Controllers\UserController.cs:line 271
+========================================
+========================================
+Timestamp: 2024-09-12 11:58:48
+Message: Object reference not set to an instance of an object.
+Stack Trace:    at SocialMediaWeb.Controllers.UserController.ManagePost() in D:\SocialMedia_WebApplication\SocialMediaWeb\SocialMediaWeb\Controllers\UserController.cs:line 271
+========================================

@@ -61,3 +61,60 @@
     text-decoration: underline; 
     transition: color 0.3s ease, text-decoration 0.3s ease; 
 }
+
+
+
+/* Notification dropdown list styles */
+#notificationList {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+
+
+/* Notification list item */
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Message title and image container */
+.notification-content {
+    display: flex;
+    align-items: center;
+    
+}
+
+/* Image styles */
+.notification-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+
+.notification-text {
+    margin-left: 10px;
+}
+
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
+
+   
+
+/* Message description (optional) */
+.notification-message {
+    margin-top: 5px;
+    font-size: 14px;
+    color: black;
+    border-bottom: 1px solid #ddd;
+    text-align:center;
+}

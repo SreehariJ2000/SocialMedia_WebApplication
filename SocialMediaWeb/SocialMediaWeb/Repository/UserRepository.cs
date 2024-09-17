@@ -18,9 +18,9 @@ namespace SocialMediaWeb.Repository
             {
                 connectionString = ConfigurationManager.ConnectionStrings["SocialMediaDBConnectionString"].ConnectionString;
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(exception.Message);
             }
         }
 
@@ -501,9 +501,6 @@ namespace SocialMediaWeb.Repository
                 }
             }
         }
-
-
-
         /// <summary>
         /// Get the profile and post details of user with particular postId
         /// </summary>
@@ -620,14 +617,10 @@ namespace SocialMediaWeb.Repository
             {
                 var command = new SqlCommand("SPS_HasUserLikedPost", connection);
                 command.CommandType = CommandType.StoredProcedure;
-
-                // Add parameters
                 command.Parameters.AddWithValue("@PostId", postId);
                 command.Parameters.AddWithValue("@UserId", userId);
 
                 connection.Open();
-
-                // Execute the command and get the result (1 if liked, 0 if not)
                 var result = command.ExecuteScalar();
 
                 if (result != null && Convert.ToInt32(result) == 1)
@@ -638,6 +631,100 @@ namespace SocialMediaWeb.Repository
 
             return hasLiked;
         }
+
+
+        public void InsertContactUs(ContactUs model)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                using (var command = new SqlCommand("SPI_ContactUs", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@FirstName", model.FirstName);
+                    command.Parameters.AddWithValue("@LastName", model.LastName);
+                    command.Parameters.AddWithValue("@Email", model.Email);
+                    command.Parameters.AddWithValue("@Description", model.Description);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public void AddNotification(int postId, string message , string messageTitle)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("SPI_Notification", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@postId", postId);
+                        command.Parameters.AddWithValue("@message", message);
+                        command.Parameters.AddWithValue("@messageTitle", messageTitle);
+                        command.ExecuteNonQuery();
+                    }   
+                
+            }
+        }
+
+        public List<Notification> GetNotifications(int userId)
+        {
+            List<Notification> notifications = new List<Notification>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("SPS_Notification", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@UserId", userId);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                notifications.Add(new Notification
+                                {
+                                    NotificationId=(int)reader["notificationId"],
+                                    Message = reader["message"].ToString(),
+                                    messageTitle = reader["messageTitle"].ToString(),
+                                    CreatedAt = Convert.ToDateTime(reader["createdAt"]),
+                                    ImageUrl = reader["imageUrl"].ToString()
+                                });
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+            return notifications;
+        }
+
+
+
+        public void UpdateViewStatus(int notificationId)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand("SPU_Notification", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@NotificationId", notificationId);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
+
 
 
 

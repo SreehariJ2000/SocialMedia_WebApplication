@@ -20,18 +20,15 @@
 
 
 
-        // load like status when page load
-        // Iterate through all the posts to check the like status
+       
         $('.like-button').each(function () {
             var postId = $(this).data('post-id');
             var likeButton = $(this);
-
-            // Send AJAX request to check like status for each post
             $.post('/User/CheckLikeStatus', { postId: postId }, function (response) {
                 if (response.liked) {
-                    likeButton.css('color', 'blue').data('liked', true);  // Update the color if liked
+                    likeButton.css('color', 'blue').data('liked', true);  
                 } else {
-                    likeButton.css('color', 'black').data('liked', false);  // Keep black if not liked
+                    likeButton.css('color', 'black').data('liked', false);  
                 }
             });
         });
